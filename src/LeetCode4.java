@@ -28,6 +28,12 @@ public class LeetCode4 {
     }
 
 
+    /**
+     * 思路： 归并排序
+     * @param nums1
+     * @param nums2
+     * @return
+     */
     public static double findMedianSortedArrays(int[] nums1, int[] nums2) {
 
         int length1 = nums1.length;
