@@ -1,4 +1,3 @@
-import java.util.Arrays;
 
 /**
  * 非递减数列
@@ -7,101 +6,57 @@ public class LeetCode665 {
 
     public static void main(String[] args) {
         //false
-//        System.out.println(checkPossibility(new int[]{4, 2, 1}));
-//
-//        //true
-//        System.out.println(checkPossibility(new int[]{4, 2, 3}));
-//
-//        //true
-//        System.out.println(checkPossibility(new int[]{-1, 4, 2, 3}));
-//
-//        //false
-//        System.out.println(checkPossibility(new int[]{3, 4, 2, 3}));
-//
-//        //false
-//        System.out.println(checkPossibility(new int[]{1, 5, 4, 6, 7, 10, 8, 9}));
-//
-//        //false
-//        System.out.println(checkPossibility(new int[]{1,3,5,2,4}));
+        System.out.println("期望 false  结果： " + checkPossibility(new int[]{4, 2, 1}));
 
-        System.out.println(checkPossibility(new int[]{1,5,4,6,7,8,9}));
+        //true
+        System.out.println("期望 true   结果： " + checkPossibility(new int[]{4, 2, 3}));
+
+        //true
+        System.out.println("期望 true   结果： " + checkPossibility(new int[]{-1, 4, 2, 3}));
+
+        //false
+        System.out.println("期望 false  结果： " + checkPossibility(new int[]{3, 4, 2, 3}));
+
+        //false
+        System.out.println("期望 false  结果： " + checkPossibility(new int[]{1, 5, 4, 6, 7, 10, 8, 9}));
+
+        //false
+        System.out.println("期望 false  结果： " + checkPossibility(new int[]{1, 3, 5, 2, 4}));
+
+        //true
+        System.out.println("期望 true   结果： " + checkPossibility(new int[]{2, 3, 3, 2, 4}));
     }
 
     public static boolean checkPossibility(int[] nums) {
-
         /**
-         * 思想类似于二分查找，如果有多余1次需要修改，那么就是false
+         * O(n)的遍历
          */
-
-        return check(nums, 0, nums.length) <= 1 ? true : false;
-    }
-
-    private static int check(int[] nums, int start, int end) {
-        int length = end - start;
-
         int modCount = 0;
-
-        if (length <=0) {
-            return 0;
-        } else if (length == 1) {
-            return 0;
-        } else if (length == 2) {
-            if (nums[start] > nums[start + 1]) {
-                modCount++;
-            }
-            return modCount;
-        } else if (length == 3) {
-            if (nums[start] > nums[start+1] ) {
-                nums[start] = nums[start+1];
-                System.out.println(Arrays.toString(nums));
-                modCount++;
-            }
-            if (nums[start+1] > nums[start+2]) {
-                nums[start+1] = nums[start+2];
-                modCount++;
-            }
-            return modCount;
-        } else {
-            int mid = start + length / 2;
-            int preMid = mid - 1;
-
-            if (nums[preMid] > nums[mid]) {
-                nums[preMid] = nums[mid];
-                modCount++;
-
-                //提前结束
-                if (modCount > 1) {
-                    return modCount;
+        for (int i = 0; i < nums.length - 1; i++) {
+            //发现有非递减的数
+            if (nums[i] > nums[i + 1]) {
+                // i - 1的数 比 i + 1 小，可以赋值为 i + 1的数值
+                if (((i >= 1) && nums[i - 1] <= nums[i + 1])
+                        || i == 0) {
+                    nums[i] = nums[i + 1];
+                    modCount++;
+                } else {
+                    nums[i + 1] = nums[i];
+                    modCount++;
                 }
-            }
-
-            modCount += check(nums, start, mid);
-
-            if (modCount > 1) {
-                return modCount;
-            }
-
-            modCount += check(nums, mid, nums.length);
-
-            if (modCount > 1) {
-                return modCount;
-            }
-
-            if (nums[preMid] > nums[mid]) {
-                nums[preMid] = nums[mid];
-                modCount++;
-                //提前结束
                 if (modCount > 1) {
-                    return modCount;
+                    return false;
                 }
+            } else if (nums[i] < nums[i + 1]) {
+
             }
-
-
         }
-
-        System.out.println(Arrays.toString(nums));
-        return modCount;
+        return true;
     }
 
-
+    /**
+     * * {总结}
+     *  1、思路偏了
+     *  2、自测的测试用例不够全面，有边界问题没有想到
+     */
 }
