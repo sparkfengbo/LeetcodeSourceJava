@@ -20,6 +20,8 @@
  * nums2 = [3, 4]
  *
  * 中位数是 (2 + 3)/2 = 2.5
+ *
+ * 解题思路： https://leetcode-cn.com/problems/median-of-two-sorted-arrays/solution/
  */
 public class LeetCode4 {
 
