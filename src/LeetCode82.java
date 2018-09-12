@@ -89,7 +89,7 @@ public class LeetCode82 {
                 }
                 tPrev = tNode;
                 tNode = tNode.next;
-            } else{
+            } else {
                 if (tPrev != null) {
                     tPrev.next = tNode.next;
                 }
@@ -97,5 +97,33 @@ public class LeetCode82 {
             }
         }
         return resultHead;
+    }
+
+
+    /**
+     * 思路：双指针
+     * @param head
+     * @return
+     */
+    public static ListNode deleteDuplicates1(ListNode head) {
+        if (head == null || head.next == null)
+            return head;
+        ListNode fakeNode = new ListNode(-1);
+
+        ListNode result = fakeNode;
+        ListNode pre = head;
+        ListNode cur = head;
+        while (cur != null && cur.next != null) {
+            while (cur.next != null && cur.next.val == pre.val)
+                cur = cur.next;
+            if (cur == pre) {
+                result.next = pre;
+                result = result.next;
+            }
+            pre = cur.next;
+            cur = cur.next;
+        }
+        result.next = cur;
+        return fakeNode.next;
     }
 }
