@@ -53,6 +53,9 @@ public class LeetCode141 {
 
 
     /**
+     *
+     * https://blog.csdn.net/qq_37765748/article/details/80014060
+     * 
      * 快慢指针
      * @param head
      * @return
