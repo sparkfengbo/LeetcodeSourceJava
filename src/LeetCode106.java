@@ -14,11 +14,11 @@ import java.util.Arrays;
  * 后序遍历 postorder = [9,15,7,20,3]
  * 返回如下的二叉树：
  * <p>
- * 3
- * / \
- * 9  20
- * /  \
- * 15   7
+ *      3
+ *     / \
+ *    9  20
+ *       / \
+ *      15 7
  */
 public class LeetCode106 {
 
@@ -26,43 +26,49 @@ public class LeetCode106 {
         int val;
         TreeNode left;
         TreeNode right;
+
         TreeNode(int x) {
             val = x;
         }
     }
 
     public static void main(String[] args) {
-//        System.out.println(findMedianSortedArrays(new int[]{3}, new int[]{-2, -1}));
+        TreeNode result = buildTree(new int[]{9, 3, 15, 20, 7}, new int[]{9, 15, 7, 20, 3});
+        System.out.println(result.val);
+
+        TreeNode result2 = buildTree(new int[]{1, 3, 2}, new int[]{3, 2, 1});
+        System.out.println(result2.val);
     }
 
     public static TreeNode buildTree(int[] inorder, int[] postorder) {
+        if (inorder.length == 0) {
+            return null;
+        } else if (inorder.length == 1) {
+            return new TreeNode(inorder[0]);
+        }
+
         int rootValue = postorder[postorder.length - 1];
         TreeNode root = new TreeNode(rootValue);
 
-        int leftLength = Arrays.binarySearch(inorder, rootValue);
-        int rightLength = inorder.length - leftLength - 1;
-
-
-        int[] leftInorder = Arrays.copyOf(inorder, leftLength);
-        int[] leftPostorder = Arrays.copyOf(postorder, leftLength);
-
-
-        if (leftLength == 1) {
-            TreeNode left = new TreeNode(leftInorder[0]);
-            root.left = left;
-        } else {
-            root.left = buildTree(leftInorder, leftPostorder);
+        int rootIndex = 0;
+        for (int i = 0; i < inorder.length; i++) {
+            if (inorder[i] == rootValue) {
+                rootIndex = i;
+                break;
+            }
         }
 
-        int[] rightInorder = Arrays.copyOfRange(inorder, leftLength + 1, inorder.length);
-        int[] rightPostorder = Arrays.copyOfRange(postorder, leftLength, leftLength + rightLength);
+        root.left = buildTree(
+                Arrays.copyOfRange(inorder, 0, rootIndex),
+                Arrays.copyOfRange(postorder, 0, rootIndex)
+        );
 
-        if (rightLength == 1) {
-            TreeNode left = new TreeNode(rightInorder[0]);
-            root.left = left;
-        } else {
-            root.left = buildTree(rightInorder, rightPostorder);
-        }
+
+        root.right = buildTree(
+                Arrays.copyOfRange(inorder, rootIndex + 1, inorder.length),
+                Arrays.copyOfRange(postorder, rootIndex, inorder.length - 1)
+        );
+
         return root;
     }
 
