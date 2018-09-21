@@ -22,16 +22,6 @@ import java.util.Arrays;
  */
 public class LeetCode105 {
 
-    public static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
-
     public static void main(String[] args) {
         TreeNode result = buildTree(new int[]{3,9,20,15,7}, new int[]{9,3,15,20,7});
         System.out.println(result.val);
