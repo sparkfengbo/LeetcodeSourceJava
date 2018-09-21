@@ -13,15 +13,6 @@
  */
 public class LeetCode2 {
 
-    public static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-        }
-    }
-
     public static void main(String[] args) {
 
 //        ListNode root1 = new ListNode(2);

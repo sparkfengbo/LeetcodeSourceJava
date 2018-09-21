@@ -10,16 +10,6 @@
  */
 public class LeetCode203 {
 
-    public static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-        }
-    }
-
-
     public static void main(String[] args) {
 //        ListNode head = new ListNode(1);
 //        ListNode node2 = new ListNode(2);
