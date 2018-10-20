@@ -1,4 +1,5 @@
-import java.util.Arrays;
+import datastruct.ListNode;
+
 import java.util.HashSet;
 
 /**

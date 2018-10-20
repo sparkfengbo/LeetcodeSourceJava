@@ -1,3 +1,5 @@
+import datastruct.TreeNode;
+
 import java.util.*;
 
 /**
@@ -25,11 +27,11 @@ public class LeetCode107 {
     public static void main(String[] args) {
         LeetCode107 leetCode107 = new LeetCode107();
 
-//        TreeNode root = new TreeNode(3);
-//        root.left = new TreeNode(9);
-//        root.right = new TreeNode(20);
-//        root.right.left = new TreeNode(15);
-//        root.right.right = new TreeNode(7);
+//        datastruct.TreeNode root = new datastruct.TreeNode(3);
+//        root.left = new datastruct.TreeNode(9);
+//        root.right = new datastruct.TreeNode(20);
+//        root.right.left = new datastruct.TreeNode(15);
+//        root.right.right = new datastruct.TreeNode(7);
 //        System.out.println(leetCode107.levelOrderBottom(root));
 
 

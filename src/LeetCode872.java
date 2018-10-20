@@ -1,6 +1,6 @@
-import java.util.ArrayDeque;
+import datastruct.TreeNode;
+
 import java.util.ArrayList;
-import java.util.Deque;
 import java.util.List;
 
 /**

@@ -1,3 +1,5 @@
+import datastruct.ListNode;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -36,11 +38,11 @@ public class LeetCode61 {
 
 
 
-//        ListNode root1 = new ListNode(0);
-//        root1.next = new ListNode(1);
-//        root1.next.next = new ListNode(2);
+//        datastruct.ListNode root1 = new datastruct.ListNode(0);
+//        root1.next = new datastruct.ListNode(1);
+//        root1.next.next = new datastruct.ListNode(2);
 //
-//        ListNode result = rotateRight(root1, 4);
+//        datastruct.ListNode result = rotateRight(root1, 4);
 
         System.out.println();
     }

@@ -1,3 +1,5 @@
+import datastruct.TreeNode;
+
 /**
  * 合并二叉树
  *

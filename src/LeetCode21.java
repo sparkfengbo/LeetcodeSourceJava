@@ -1,5 +1,4 @@
-import java.util.ArrayDeque;
-import java.util.Deque;
+import datastruct.ListNode;
 
 /**
  * 合并两个有序链表

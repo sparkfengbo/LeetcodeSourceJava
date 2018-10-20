@@ -1,3 +1,5 @@
+import datastruct.Node;
+
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Deque;
@@ -28,25 +30,25 @@ public class LeetCode589 {
 
     public static void main(String[] args) {
 
-//        Node node5 = new Node(5, null);
-//        Node node6 = new Node(6, null);
+//        datastruct.Node node5 = new datastruct.Node(5, null);
+//        datastruct.Node node6 = new datastruct.Node(6, null);
 //
 //
-//        List<Node> list3 = new ArrayList<>();
+//        List<datastruct.Node> list3 = new ArrayList<>();
 //        list3.add(node5);
 //        list3.add(node6);
 //
 //
-//        Node node3 = new Node(3, list3);
-//        Node node2 = new Node(2, null);
-//        Node node4 = new Node(4, null);
+//        datastruct.Node node3 = new datastruct.Node(3, list3);
+//        datastruct.Node node2 = new datastruct.Node(2, null);
+//        datastruct.Node node4 = new datastruct.Node(4, null);
 //
-//        List<Node> list1 = new ArrayList<>();
+//        List<datastruct.Node> list1 = new ArrayList<>();
 //        list1.add(node3);
 //        list1.add(node2);
 //        list1.add(node4);
 //
-//        Node root1 = new Node(1, list1);
+//        datastruct.Node root1 = new datastruct.Node(1, list1);
 
 
 

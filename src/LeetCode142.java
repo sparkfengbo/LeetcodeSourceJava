@@ -1,3 +1,4 @@
+import datastruct.ListNode;
 
 /**
  * 环形链表 II

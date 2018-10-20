@@ -1,3 +1,5 @@
+import datastruct.TreeNode;
+
 /**
  * 根据二叉树创建字符串
  *

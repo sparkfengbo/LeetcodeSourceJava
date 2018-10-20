@@ -1,3 +1,5 @@
+import datastruct.ListNode;
+
 /**
  * 删除链表中的节点
  * <p>
@@ -11,24 +13,24 @@
 public class LeetCode203 {
 
     public static void main(String[] args) {
-//        ListNode head = new ListNode(1);
-//        ListNode node2 = new ListNode(2);
+//        datastruct.ListNode head = new datastruct.ListNode(1);
+//        datastruct.ListNode node2 = new datastruct.ListNode(2);
 //        head.next = node2;
-//        ListNode node3 = new ListNode(6);
+//        datastruct.ListNode node3 = new datastruct.ListNode(6);
 //        node2.next = node3;
-//        ListNode node4 = new ListNode(3);
+//        datastruct.ListNode node4 = new datastruct.ListNode(3);
 //        node3.next = node4;
-//        ListNode node5 = new ListNode(4);
+//        datastruct.ListNode node5 = new datastruct.ListNode(4);
 //        node4.next = node5;
-//        ListNode node6 = new ListNode(5);
+//        datastruct.ListNode node6 = new datastruct.ListNode(5);
 //        node5.next = node6;
-//        ListNode node7 = new ListNode(6);
+//        datastruct.ListNode node7 = new datastruct.ListNode(6);
 //        node6.next = node7;
-//        ListNode result = removeElements(head, 6);
+//        datastruct.ListNode result = removeElements(head, 6);
 
 
-//        ListNode head2 = new ListNode(1);
-//        ListNode result2 = removeElements(head2, 1);
+//        datastruct.ListNode head2 = new datastruct.ListNode(1);
+//        datastruct.ListNode result2 = removeElements(head2, 1);
 
 
         ListNode head = new ListNode(1);

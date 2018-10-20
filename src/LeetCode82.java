@@ -1,3 +1,5 @@
+import datastruct.ListNode;
+
 import java.util.HashSet;
 
 /**
@@ -17,10 +19,10 @@ import java.util.HashSet;
 public class LeetCode82 {
 
     public static void main(String[] args) {
-//        ListNode head = new ListNode(1);
-//        ListNode node2 = new ListNode(1);
+//        datastruct.ListNode head = new datastruct.ListNode(1);
+//        datastruct.ListNode node2 = new datastruct.ListNode(1);
 //        head.next = node2;
-//        ListNode node3 = new ListNode(2);
+//        datastruct.ListNode node3 = new datastruct.ListNode(2);
 //        node2.next = node3;
 
         ListNode head2 = new ListNode(1);

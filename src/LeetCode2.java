@@ -1,3 +1,5 @@
+import datastruct.ListNode;
+
 /**
  * 两数相加
  * <p>
@@ -15,30 +17,30 @@ public class LeetCode2 {
 
     public static void main(String[] args) {
 
-//        ListNode root1 = new ListNode(2);
-//        root1.next = new ListNode(4);
-//        root1.next.next = new ListNode(3);
+//        datastruct.ListNode root1 = new datastruct.ListNode(2);
+//        root1.next = new datastruct.ListNode(4);
+//        root1.next.next = new datastruct.ListNode(3);
 //
-//        ListNode root2 = new ListNode(5);
-//        root2.next = new ListNode(6);
-//        root2.next.next = new ListNode(4);
+//        datastruct.ListNode root2 = new datastruct.ListNode(5);
+//        root2.next = new datastruct.ListNode(6);
+//        root2.next.next = new datastruct.ListNode(4);
 
         ListNode root1 = new ListNode(5);
         ListNode root2 = new ListNode(5);
 
 
-//        ListNode root1 = new ListNode(9);
+//        datastruct.ListNode root1 = new datastruct.ListNode(9);
 //
-//        ListNode root2 = new ListNode(1);
-//        root2.next = new ListNode(9);
-//        root2.next.next = new ListNode(9);
-//        root2.next.next.next = new ListNode(9);
-//        root2.next.next.next.next = new ListNode(9);
-//        root2.next.next.next.next.next = new ListNode(9);
-//        root2.next.next.next.next.next.next = new ListNode(9);
-//        root2.next.next.next.next.next.next.next = new ListNode(9);
-//        root2.next.next.next.next.next.next.next.next = new ListNode(9);
-//        root2.next.next.next.next.next.next.next.next.next = new ListNode(9);
+//        datastruct.ListNode root2 = new datastruct.ListNode(1);
+//        root2.next = new datastruct.ListNode(9);
+//        root2.next.next = new datastruct.ListNode(9);
+//        root2.next.next.next = new datastruct.ListNode(9);
+//        root2.next.next.next.next = new datastruct.ListNode(9);
+//        root2.next.next.next.next.next = new datastruct.ListNode(9);
+//        root2.next.next.next.next.next.next = new datastruct.ListNode(9);
+//        root2.next.next.next.next.next.next.next = new datastruct.ListNode(9);
+//        root2.next.next.next.next.next.next.next.next = new datastruct.ListNode(9);
+//        root2.next.next.next.next.next.next.next.next.next = new datastruct.ListNode(9);
 
         ListNode result = addTwoNumbers(root1, root2);
         System.out.println();

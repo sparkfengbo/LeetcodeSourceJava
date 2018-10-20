@@ -1,3 +1,5 @@
+import datastruct.TreeNode;
+
 /**
  * 二叉树展开为链表
  *
@@ -31,7 +33,7 @@ public class LeetCode114 {
         TreeNode treeNode1 = new TreeNode(1);
         treeNode1.left = new TreeNode(2);
         treeNode1.right = new TreeNode(5);
-//        treeNode1.right.left = new TreeNode(6);
+//        treeNode1.right.left = new datastruct.TreeNode(6);
         treeNode1.right.right = new TreeNode(7);
         treeNode1.left.left = new TreeNode(3);
         treeNode1.left.right = new TreeNode(4);

@@ -1,3 +1,5 @@
+import datastruct.ListNode;
+
 /**
  * 反转链表 II
  * <p>
@@ -15,10 +17,10 @@ public class LeetCode92 {
 
     public static void main(String[] args) {
         ListNode root = new ListNode(1);
-//        root.next = new ListNode(2);
-//        root.next.next = new ListNode(3);
-//        root.next.next.next = new ListNode(4);
-//        root.next.next.next.next = new ListNode(5);
+//        root.next = new datastruct.ListNode(2);
+//        root.next.next = new datastruct.ListNode(3);
+//        root.next.next.next = new datastruct.ListNode(4);
+//        root.next.next.next.next = new datastruct.ListNode(5);
         ListNode result = reverseBetween(root, 1, 1);
         System.out.println();
     }

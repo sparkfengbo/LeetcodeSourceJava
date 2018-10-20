@@ -1,3 +1,5 @@
+import datastruct.TreeNode;
+
 /**
  * 相同的树
  *

@@ -1,4 +1,4 @@
-import sun.tools.jconsole.MaximizableInternalFrame;
+import datastruct.TreeNode;
 
 /**
  * 二叉树的直径
