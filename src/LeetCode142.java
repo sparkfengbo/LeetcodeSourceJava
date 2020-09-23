@@ -49,11 +49,7 @@ public class LeetCode142 {
 
         while (true) {
             //查询到末尾，肯定没环
-            if (fastNode.next == null
-                    || fastNode.next.next == null
-                    || slowNode.next == null) {
-                return null;
-            }
+            if (fastNode == null || fastNode.next == null) return null;
 
             fastNode = fastNode.next.next;
             slowNode = slowNode.next;

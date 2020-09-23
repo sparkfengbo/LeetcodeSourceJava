@@ -29,6 +29,8 @@ public class LeetCode206 {
         System.out.println();
     }
 
+
+    //这个解法有点歪，其实用栈就能解决
     public static ListNode reverseList(ListNode head) {
         if (head == null) {
             return null;
@@ -51,4 +53,23 @@ public class LeetCode206 {
 
         return prevNode.next;
     }
+
+    //迭代  一遍遍历就可解决
+    public static ListNode reverseList2(ListNode head) {
+        if (head == null) {
+            return null;
+        }
+
+        ListNode first = head;
+        ListNode second = first.next;
+        first.next = null;
+        while (second != null) {
+            ListNode tmp = second.next;
+            second.next = first;
+            first = second;
+            second = tmp;
+        }
+        return first;
+    }
+
 }

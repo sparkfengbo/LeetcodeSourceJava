@@ -60,7 +60,7 @@ public class LeetCode2 {
 
         ListNode curNode = prevResultHead;
 
-        boolean isOverTen = false;
+        boolean carry = false;
 
         while (l1 != null || l2 != null) {
             int temp = 0;
@@ -75,21 +75,21 @@ public class LeetCode2 {
                 l2 = l2.next;
             }
 
-            if (isOverTen) {
+            if (carry) {
                 temp += 1;
             }
 
             if (temp / 10 >= 1) {
-                isOverTen = true;
+                carry = true;
             } else {
-                isOverTen = false;
+                carry = false;
             }
             ListNode node = new ListNode(temp % 10);
             curNode.next = node;
             curNode = curNode.next;
         }
 
-        if (isOverTen) {
+        if (carry) {
             curNode.next = new ListNode(1);
         }
         return prevResultHead.next;

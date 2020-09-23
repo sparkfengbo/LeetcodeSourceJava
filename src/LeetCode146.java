@@ -35,32 +35,76 @@ public class LeetCode146 {
      * int param_1 = obj.get(key);
      * obj.put(key,value);
      */
-
     static class LRUCache {
+        private static class Node<K,V> {
+            Node before, after;
+            K key;
+            V val;
 
-        private HashMap<Integer, Integer> mMaps;
-        private int max;
+            public Node(K key, V val) {
+                this.key = key;
+                this.val = val;
+            }
+        }
+
+        private int capacity;
+        private Map<Integer, Node<Integer, Integer>> mMaps;
+        private Node dummyHead, dummyTail;
 
         public LRUCache(int capacity) {
-            max = capacity;
-            mMaps = new LinkedHashMap<Integer, Integer>(capacity, 0.75f, true);
+            this.capacity = capacity;
+            mMaps = new HashMap(capacity);
+            dummyHead = new Node(-1, -1);
+            dummyTail = new Node(-1, -1);
+            dummyHead.after = dummyTail;
+            dummyTail.before = dummyHead;
         }
 
         public int get(int key) {
-            Integer result = mMaps.get(key);
-            return result != null ? result : -1;
+            if (mMaps.containsKey(key)) {
+                Node<Integer, Integer> e = mMaps.get(key);
+                e.before.after = e.after;
+                e.after.before = e.before;
+
+                //放到队尾
+                appendTail(e);
+                return e.val;
+            }
+            return -1;
         }
 
         public void put(int key, int value) {
-            if (mMaps.size() >= max && mMaps.get(key) == null) {
-                for (Map.Entry<Integer, Integer> entry : mMaps.entrySet()) {
-                    mMaps.remove(entry.getKey());
-                    if (mMaps.size() < max) {
-                        break;
-                    }
-                }
+            if (mMaps.containsKey(key)) {
+                Node<Integer, Integer> e = mMaps.get(key);
+                e.val = value;
+
+                e.before.after = e.after;
+                e.after.before = e.before;
+
+                //放到队尾
+                appendTail(e);
+                return;
             }
-            mMaps.put(key, value);
+
+            if (capacity == mMaps.size()) {
+                // 删除队首
+                Node r = dummyHead.after;
+                dummyHead.after.after.before = dummyHead;
+                dummyHead.after = dummyHead.after.after;
+                mMaps.remove(r.key);
+            }
+
+            Node<Integer, Integer> e = new Node<>(key, value);
+            //放到队尾
+            appendTail(e);
+            mMaps.put(key, e);
+        }
+
+        private void appendTail(Node e){
+            e.before = dummyTail.before;
+            e.after = dummyTail;
+            dummyTail.before.after = e;
+            dummyTail.before = e;
         }
     }
 

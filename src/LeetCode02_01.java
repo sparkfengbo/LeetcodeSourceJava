@@ -1,20 +1,8 @@
 import datastruct.ListNode;
 
-/**
- * 删除排序链表中的重复元素
- * <p>
- * 给定一个排序链表，删除所有重复的元素，使得每个元素只出现一次。
- * <p>
- * 示例 1:
- * <p>
- * 输入: 1->1->2
- * 输出: 1->2
- * 示例 2:
- * <p>
- * 输入: 1->1->2->3->3
- * 输出: 1->2->3
- */
-public class LeetCode83 {
+import java.util.HashSet;
+
+public class LeetCode02_01 {
 
     public static void main(String[] args) {
         ListNode head = new ListNode(1);
@@ -38,16 +26,17 @@ public class LeetCode83 {
     }
 
     public static ListNode deleteDuplicates(ListNode head) {
+        HashSet<Integer> set = new HashSet<>();
         if (head == null) {
             return head;
         }
-        int max = head.val;
+        set.add(head.val);
         ListNode tNode = head.next, tPrev = head;
         while (tNode != null) {
-            if (max == tNode.val) {
+            if (set.contains(tNode.val)) {
                 tPrev.next = tNode.next;
             } else {
-                max = tNode.val;
+                set.add(tNode.val);
                 tPrev = tNode;
             }
             tNode = tNode.next;
@@ -55,4 +44,22 @@ public class LeetCode83 {
 
         return head;
     }
+
+    //    链接：https://leetcode-cn.com/problems/remove-duplicate-node-lcci/solution/yi-chu-zhong-fu-jie-dian-by-leetcode-solution/
+    public ListNode removeDuplicateNodes(ListNode head) {
+        ListNode ob = head;
+        while (ob != null) {
+            ListNode oc = ob;
+            while (oc.next != null) {
+                if (oc.next.val == ob.val) {
+                    oc.next = oc.next.next;
+                } else {
+                    oc = oc.next;
+                }
+            }
+            ob = ob.next;
+        }
+        return head;
+    }
+
 }

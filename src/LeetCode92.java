@@ -1,3 +1,4 @@
+import com.sun.tools.doclets.formats.html.SingleIndexWriter;
 import datastruct.ListNode;
 
 /**
@@ -17,11 +18,11 @@ public class LeetCode92 {
 
     public static void main(String[] args) {
         ListNode root = new ListNode(1);
-//        root.next = new datastruct.ListNode(2);
-//        root.next.next = new datastruct.ListNode(3);
-//        root.next.next.next = new datastruct.ListNode(4);
-//        root.next.next.next.next = new datastruct.ListNode(5);
-        ListNode result = reverseBetween(root, 1, 1);
+        root.next = new datastruct.ListNode(2);
+        root.next.next = new datastruct.ListNode(3);
+        root.next.next.next = new datastruct.ListNode(4);
+        root.next.next.next.next = new datastruct.ListNode(5);
+        ListNode result = reverseBetween2(root, 1, 4);
         System.out.println();
     }
 
@@ -82,5 +83,56 @@ public class LeetCode92 {
         } else {
             return head;
         }
+    }
+
+    /**
+     * 上面的写法太复杂
+     * @param head
+     * @param m
+     * @param n
+     * @return
+     */
+    public static ListNode reverseBetween2(ListNode head, int m, int n) {
+        if (head == null) {
+            return null;
+        }
+
+        if (m == n || head.next == null) {
+            return head;
+        }
+
+        ListNode current = head, prev = null, next = null;
+        ListNode start = null, end = null, startPrev = null, endNext = null;
+        int index = 1;
+        while (current != null) {
+            next = current.next;
+            if (index == m) {
+                start = current;
+                startPrev = prev;
+            }
+            if (index == n) {
+                end = current;
+                endNext = current.next;
+            }
+
+            if (index > m && index<= n) {
+                //翻转链表
+                current.next = prev;
+            }
+            index++;
+            prev = current;
+            current = next;
+        }
+
+        if (startPrev != null) {
+            startPrev.next = end;
+        }
+
+        start.next = endNext;
+
+        if (m == 1) {
+            return end;
+        }
+        return head;
     }
 }

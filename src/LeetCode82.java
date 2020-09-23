@@ -101,22 +101,39 @@ public class LeetCode82 {
     public static ListNode deleteDuplicates1(ListNode head) {
         if (head == null || head.next == null)
             return head;
-        ListNode fakeNode = new ListNode(-1);
+        ListNode dummyNode = new ListNode(-1);
 
-        ListNode result = fakeNode;
+        ListNode tail = dummyNode;
         ListNode pre = head;
         ListNode cur = head;
         while (cur != null && cur.next != null) {
             while (cur.next != null && cur.next.val == pre.val)
                 cur = cur.next;
             if (cur == pre) {
-                result.next = pre;
-                result = result.next;
+                tail.next = pre;
+                tail = tail.next;
             }
             pre = cur.next;
             cur = cur.next;
         }
-        result.next = cur;
-        return fakeNode.next;
+        tail.next = cur;
+        return dummyNode.next;
+//        if (head == null) return head;  // 若head为空则直接返回null
+//        ListNode dummy = new ListNode(-1);  // 建立一个虚拟头结点
+//        ListNode tail = dummy;  // 定义一个尾巴，用于尾插法。
+//        for (ListNode l = head, r = head; l != null; l = r) {
+//            while (r != null && r.val == l.val) r = r.next;  // 只要r不为空并且与l的值相等则一直向后移动
+//            if (l.next == r) {  // 若长度为1，则通过尾插法加入。
+//                tail.next = l;  // 基本的尾插法
+//                tail = l;
+//                tail.next = null;  // 这里记得将尾部的后面置为null，不然可能后面会带着一些其他的节点。
+//            }
+//        }
+//        return dummy.next;
+//
+//        作者：optimjie
+//        链接：https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list-ii/solution/javashuang-zhi-zhen-dai-ma-jiao-duan-rong-yi-li-ji/
+//        来源：力扣（LeetCode）
+//        著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
     }
 }

@@ -71,10 +71,11 @@ public class LeetCode61 {
 
         ListNode finalHead = head;
 
-        int finalIndex =  length - k % length + 1;
-//        System.out.println(finalIndex);
-        for (int i = 1; i < finalIndex; i++) {
-            if (i == finalIndex - 1) {
+        // find new tail : (n - k % n - 1)th node
+        // and new head : (n - k % n)th node
+        int newTailIndex =  length - k % length + 1;
+        for (int i = 1; i < newTailIndex; i++) {
+            if (i == newTailIndex - 1) {
                 ListNode node = finalHead;
                 finalHead = finalHead.next;
                 node.next = null;
@@ -107,6 +108,7 @@ public class LeetCode61 {
             current = current.next;
         }
         int length = nodeList.size();
+
         ListNode rotateHead = nodeList.get(length - k % length);
         nodeList.get(length - 1).next = head;
         return rotateHead;
