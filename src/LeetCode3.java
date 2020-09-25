@@ -1,5 +1,6 @@
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 
 /**
  * 无重复字符的最长子串
@@ -66,23 +67,20 @@ public class LeetCode3 {
      * @return
      */
     public static int lengthOfLongestSubstring(String s) {
-        int length = s.length();
-
-        if (length == 0) {
+        int len = s.length();
+        if (len == 0) {
             return 0;
         }
-
-        HashMap<Character, Integer> hashMap = new HashMap<>();
-
-        int maxLength = 0;
-        for (int left = 0 , right = 0; right < length; right++) {
-            if (hashMap.containsKey(s.charAt(right))) {
-                left =  Math.max(left, hashMap.get(s.charAt(right)) + 1);
+        //abba
+        Map<Character, Integer> cache = new HashMap<>();
+        int maxLength = Integer.MIN_VALUE;
+        for (int l = 0, r = 0; r < len; r++) {
+            if (cache.containsKey(s.charAt(r))) {
+                l =  Math.max(l, cache.get(s.charAt(r)) + 1);
             }
-            hashMap.put(s.charAt(right), right);
-            maxLength = Math.max(maxLength, right - left + 1);
+            cache.put(s.charAt(r), r);
+            maxLength = Math.max(maxLength, r - l + 1);
         }
-
         return maxLength;
     }
 
