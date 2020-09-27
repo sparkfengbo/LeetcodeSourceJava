@@ -1,6 +1,7 @@
 import java.util.ArrayDeque;
 import java.util.Deque;
 import java.util.Queue;
+import java.util.Stack;
 
 /**
  * 有效的括号
@@ -37,7 +38,7 @@ import java.util.Queue;
 public class LeetCode20 {
 
     public static void main(String[] args) {
-        System.out.println(isValid("()"));
+//        System.out.println(isValid("()"));
 
         System.out.println(isValid("){"));
     }
@@ -49,24 +50,21 @@ public class LeetCode20 {
             return false;
         }
 
-        Deque<Character> characters = new ArrayDeque<>();
+        Stack<Character> characters = new Stack<>();
         for (int i = 0; i < s.length(); i++) {
-            Character c = s.charAt(i);
-            if (c.equals('(') || c.equals('{') || c.equals('[')) {
+            char c = s.charAt(i);
+            if (c == '(' || c =='{' || c == '[') {
                 characters.push(c);
-            } else if (c.equals(')') || c.equals('}') || c.equals(']')) {
-                Character first = characters.peekFirst();
-                if (first != null) {
-                    if ((c.equals(')') && characters.pollFirst().equals('('))
-                            || (c.equals('}') && characters.pollFirst().equals('{'))
-                            || (c.equals(']') && characters.pollFirst().equals('['))) {
-                        continue;
-                    } else {
-                        return false;
-                    }
+            } else if(c == ')' || c=='}' || c == ']'){
+                if (!characters.empty()  && ( (c ==')' && characters.pop() == '(')
+                        || (c=='}' && characters.pop() =='{')
+                        || (c==']' && characters.pop() =='['))) {
+                    continue;
                 } else {
                     return false;
                 }
+            } else {
+                return false;
             }
         }
 
