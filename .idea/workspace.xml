@@ -6,9 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b4385a63-8cf5-48a1-98bf-98fe8f564c3a" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LeetCode136.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LeetCode136.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LeetCode20.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LeetCode20.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LeetCode8.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LeetCode8.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -188,7 +185,7 @@
       <workItem from="1599633955518" duration="81167000" />
       <workItem from="1600845999688" duration="23023000" />
       <workItem from="1601081842917" duration="21707000" />
-      <workItem from="1601174504489" duration="10121000" />
+      <workItem from="1601174504489" duration="13365000" />
     </task>
     <servers />
   </component>
@@ -289,6 +286,10 @@
     <state width="1638" height="321" key="GridCell.Tab.1.right/0.23.1680.961@0.23.1680.961" timestamp="1600876027376" />
     <state width="1638" height="418" key="GridCell.Tab.1.right/0.23.1680.964@0.23.1680.964" timestamp="1599829464462" />
     <state width="1638" height="337" key="GridCell.Tab.1.right/0.23.1680.967@0.23.1680.967" timestamp="1600135355260" />
+    <state x="558" y="212" key="RollbackChangesDialog" timestamp="1601226161982">
+      <screen x="0" y="23" width="1680" height="959" />
+    </state>
+    <state x="558" y="212" key="RollbackChangesDialog/0.23.1680.959@0.23.1680.959" timestamp="1601226161982" />
     <state x="571" y="241" width="549" height="524" key="StructurePopup" timestamp="1601130125409">
       <screen x="0" y="23" width="1680" height="959" />
     </state>
@@ -306,10 +307,10 @@
       <screen x="0" y="23" width="1680" height="959" />
     </state>
     <state x="0" y="58" width="1421" height="695" key="dock-window-1/0.23.1680.959@0.23.1680.959" timestamp="1601218009365" />
-    <state x="542" y="257" width="598" height="490" key="find.popup" timestamp="1600876732495">
+    <state x="542" y="257" width="598" height="490" key="find.popup" timestamp="1601227132491">
       <screen x="0" y="23" width="1680" height="959" />
     </state>
-    <state x="542" y="257" width="598" height="490" key="find.popup/0.23.1680.959@0.23.1680.959" timestamp="1600876732495" />
+    <state x="542" y="257" width="598" height="490" key="find.popup/0.23.1680.959@0.23.1680.959" timestamp="1601227132491" />
     <state x="542" y="257" width="598" height="492" key="find.popup/0.23.1680.961@0.23.1680.961" timestamp="1599975301810" />
     <state x="542" y="258" width="598" height="495" key="find.popup/0.23.1680.965@0.23.1680.965" timestamp="1600134149626" />
     <state x="515" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1600999986162">
@@ -340,11 +341,6 @@
           <url>jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/src.zip!/java/util/HashMap.java</url>
           <line>566</line>
           <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/LeetCode409.java</url>
-          <line>66</line>
-          <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/LeetCode203.java</url>
