@@ -1,7 +1,7 @@
 import java.util.HashMap;
 import java.util.HashSet;
 
-public class LeetCode33 {
+public class LeetCode33_搜索旋转排序数组 {
 
     /**
      * 􏴑􏳋􏳼􏰸􏰻􏲛􏲜􏸄􏳩􏰿􏰾􏸅􏸆􏸇􏸈􏰮􏶌􏱨􏴑􏳋􏳼􏰸􏰻􏲛􏲜􏸄􏳩􏰿􏰾􏸅􏸆􏸇􏸈􏰮􏶌􏱨􏴑􏳋􏳼􏰸􏰻􏲛􏲜􏸄􏳩􏰿􏰾􏸅􏸆􏸇􏸈􏰮􏶌􏱨􏰨􏴑􏳋􏳼􏰸􏰻􏲛􏲜􏸄􏳩􏰿􏰾􏸅􏸆􏸇􏸈􏰮􏶌􏱨􏰨􏴑􏳋􏳼􏰸􏰻􏲛􏲜􏸄􏳩􏰿􏰾􏸅􏸆􏸇􏸈􏰮􏶌􏱨􏰨􏴑􏳋􏳼􏰸􏰻􏲛􏲜􏸄􏳩􏰿􏰾􏸅􏸆􏸇􏸈􏰮􏶌􏱨􏰨􏴑􏳋􏳼􏰸􏰻􏲛􏲜􏸄􏳩􏰿􏰾􏸅􏸆􏸇􏸈􏰮􏶌􏱨􏰨 数组 + 二分查找，难度在于边界确定
@@ -25,13 +25,13 @@ public class LeetCode33 {
             }
 
             if (nums[l] <= nums[mid]) {
-                if (nums[l] <= target && nums[mid] > target){
+                if (nums[l] <= target && target < nums[mid] ){
                     r = mid;
                 } else {
                     l = mid + 1;
                 }
             } else {
-                if (nums[mid] < target && nums[r - 1] >= target){
+                if (nums[mid] < target && target <= nums[r - 1]){
                     l = mid + 1;
                 } else {
                     r = mid;
@@ -44,8 +44,8 @@ public class LeetCode33 {
 
     public static void main(String[] args) {
         int[] test = new int[]{4, 5, 6, 7, 0, 1, 2};
-        System.out.println(search(test, 0));
+        int[] test2 = new int[]{3, 1};
+//        System.out.println(search(test, 0));
+        System.out.println(search(test2, 1));
     }
-
-
 }
