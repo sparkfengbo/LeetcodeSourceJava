@@ -19,7 +19,7 @@ import java.util.*;
  * 输出: [1,3,2]
  * 进阶: 递归算法很简单，你可以通过迭代算法完成吗？
  */
-public class LeetCode94 {
+public class LeetCode94_二叉树中序遍历 {
 
     public static void main(String[] args) {
         TreeNode root = new TreeNode(1);
@@ -60,16 +60,14 @@ public class LeetCode94 {
             return ans;
         }
         Stack<TreeNode> stack = new Stack<>();
-        TreeNode node = root;
-        while (node != null || !stack.isEmpty()) {
-            while (node != null) {
-                stack.push(node);
-                node = node.left;
+        while (root != null || !stack.isEmpty()) {
+            while (root != null) {
+                stack.push(root);
+                root = root.left;
             }
-
-            TreeNode tmp = stack.pop();
-            ans.add(tmp.val);
-            node = tmp.right;
+            root = stack.pop();
+            ans.add(root.val);
+            root = root.right;
         }
 
         return ans;

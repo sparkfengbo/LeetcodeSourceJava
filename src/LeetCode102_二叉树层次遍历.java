@@ -1,4 +1,3 @@
-import apple.laf.JRSUIUtils;
 import datastruct.TreeNode;
 
 import java.util.*;
@@ -24,7 +23,7 @@ import java.util.*;
  *   [15,7]
  * ]
  */
-public class LeetCode102 {
+public class LeetCode102_二叉树层次遍历 {
 
     public static void main(String[] args) {
 
@@ -35,7 +34,7 @@ public class LeetCode102 {
         treeNode1.right.right = new TreeNode(7);
 
 
-        LeetCode102 leetCode101 = new LeetCode102();
+        LeetCode102_二叉树层次遍历 leetCode101 = new LeetCode102_二叉树层次遍历();
         System.out.println(leetCode101.levelOrder(treeNode1));
 
     }

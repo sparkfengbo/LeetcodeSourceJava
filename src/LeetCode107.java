@@ -33,9 +33,6 @@ public class LeetCode107 {
 //        root.right.left = new datastruct.TreeNode(15);
 //        root.right.right = new datastruct.TreeNode(7);
 //        System.out.println(leetCode107.levelOrderBottom(root));
-
-
-
         TreeNode root1 = new TreeNode(1);
         root1.left = new TreeNode(2);
         root1.right = new TreeNode(3);
@@ -45,58 +42,33 @@ public class LeetCode107 {
     }
 
     public List<List<Integer>> levelOrderBottom(TreeNode root) {
-        LinkedList<List<Integer>> result = new LinkedList<>();
+        LinkedList<List<Integer>> levelOrder = new LinkedList<>();
 
         if (root == null) {
-            return result;
+            return levelOrder;
         }
 
-        //根
-        List<Integer> floorRoot = new ArrayList<>();
-        floorRoot.add(root.val);
-        result.add(floorRoot);
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.offer(root);
 
-        Deque<TreeNode> currentfloorStack = new ArrayDeque<>();
-        Deque<TreeNode> prefloorStack = new ArrayDeque<>();
-        prefloorStack.push(root);
+        while (!queue.isEmpty()) {
+            List<Integer> level = new ArrayList<>();
 
-        while (!currentfloorStack.isEmpty() || !prefloorStack.isEmpty()) {
-            if (!prefloorStack.isEmpty()) {
-                mergeStack(prefloorStack ,currentfloorStack,result);
-            } else {
-                mergeStack(currentfloorStack ,prefloorStack,result);
+            int currentSize = queue.size();
+            for (int i = 0 ;i < currentSize; i++) {
+                TreeNode node = queue.poll();
+                level.add(node.val);
+                if (node.left != null) {
+                    queue.offer(node.left);
+                }
+
+                if (node.right != null) {
+                    queue.offer(node.right);
+                }
             }
+            levelOrder.add(0, level);
         }
-        return result;
+
+        return levelOrder;
     }
-
-    private void mergeStack(Deque<TreeNode> currentfloorStack, Deque<TreeNode> prefloorStack, LinkedList<List<Integer>> result) {
-        TreeNode tmp;
-        List<Integer> currentFloor = new ArrayList<>();
-        while (!currentfloorStack.isEmpty()) {
-            tmp = currentfloorStack.pollFirst();
-
-            if (tmp.left == null && tmp.right == null) {
-                continue;
-            }
-
-
-
-            if (tmp.left != null) {
-                prefloorStack.addLast(tmp.left);
-                currentFloor.add(tmp.left.val);
-            }
-
-            if (tmp.right != null) {
-                prefloorStack.addLast(tmp.right);
-                currentFloor.add(tmp.right.val);
-            }
-        }
-
-        if (currentFloor.size() > 0) {
-            result.addFirst(currentFloor);
-        }
-
-    }
-
 }

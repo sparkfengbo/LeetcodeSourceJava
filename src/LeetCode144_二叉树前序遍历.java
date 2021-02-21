@@ -18,7 +18,7 @@ import java.util.*;
  * 输出: [1,2,3]
  * 进阶: 递归算法很简单，你可以通过迭代算法完成吗？
  */
-public class LeetCode144 {
+public class LeetCode144_二叉树前序遍历 {
 
     public static void main(String[] args) {
         TreeNode root = new TreeNode(1);
@@ -61,16 +61,15 @@ public class LeetCode144 {
     public static List<Integer> preorderTraversalIterate(TreeNode root) {
         List<Integer> ans = new ArrayList<>();
         Stack<TreeNode> stack = new Stack<>();
-        TreeNode node = root;
-        while (node != null || !stack.isEmpty()) {
+        while (root != null || !stack.isEmpty()) {
             //把左节点全部放入栈中
-            while (node != null) {
-                stack.push(node);
-                ans.add(node.val);
-                node = node.left;
+            while (root != null) {
+                stack.push(root);
+                ans.add(root.val);
+                root = root.left;
             }
-            node = stack.pop();
-            node = node.right;
+            root = stack.pop();
+            root = root.right;
         }
         return ans;
     }
