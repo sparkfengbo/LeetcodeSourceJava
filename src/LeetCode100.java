@@ -44,37 +44,9 @@ public class LeetCode100 {
     public static boolean isSameTree(TreeNode p, TreeNode q) {
         if (p == null && q == null) {
             return true;
-        } else if (p == null) {
-            return false;
-        } else if (q == null) {
-            return false;
+        } else if (p != null && q != null && p.val == q.val) {
+            return isSameTree(p.left, q.left) && isSameTree(p.right, q.right);
         }
-
-        if (p.val == q.val) {
-            boolean isLeftSame = true, isRightSame = true;
-            if (p.left == null && q.left == null && p.right == null && q.right == null) {
-                return true;
-            }
-
-            if ((p.left == null && q.left != null) ||
-                    (p.right == null && q.right != null) ||
-                    (q.left == null && p.left != null) ||
-                    (q.right == null && p.right != null)) {
-                return false;
-            }
-
-            if (p.left != null && q.left != null) {
-                isLeftSame = isSameTree(p.left, q.left);
-            }
-
-            if (p.right != null && q.right != null) {
-                isRightSame = isSameTree(p.right, q.right);
-            }
-
-            return isLeftSame && isRightSame;
-        } else {
-            return false;
-        }
+        return false;
     }
-
 }

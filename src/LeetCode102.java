@@ -1,3 +1,4 @@
+import apple.laf.JRSUIUtils;
 import datastruct.TreeNode;
 
 import java.util.*;
@@ -39,40 +40,64 @@ public class LeetCode102 {
 
     }
 
-    public List<List<Integer>> levelOrder(TreeNode root) {
+    public List<List<Integer>> betterlevelOrder(TreeNode root) {
+        List<List<Integer>> ans = new ArrayList<>();
         if (root == null) {
-            return new ArrayList<>();
+            return ans;
         }
 
-        List<List<Integer>> result = new ArrayList<>();
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.offer(root);
 
-        Deque<TreeNode> preLevel = new ArrayDeque<>();
-        preLevel.push(root);
-        Deque<TreeNode> currentLevle = new ArrayDeque<>();
+        while (!queue.isEmpty()) {
+            List<Integer> level = new ArrayList<>();
 
-        while (!preLevel.isEmpty()) {
+            int currentSize = queue.size();
+            for (int i = 0; i < currentSize; ++i) {
+                TreeNode node = queue.poll();
+                level.add(node.val);
+                if (node.left != null) {
+                    queue.offer(node.left);
+                }
+                if (node.right != null) {
+                    queue.offer(node.right);
+                }
+            }
+            ans.add(level);
+        }
+        return ans;
+    }
 
+    public List<List<Integer>> levelOrder(TreeNode root) {
+        List<List<Integer>> ans = new ArrayList<>();
+        if (root == null) {
+            return ans;
+        }
+
+        Deque<TreeNode> currentLevelQueue = new ArrayDeque<>();
+        currentLevelQueue.push(root);
+        Deque<TreeNode> nextLevelQueue = new ArrayDeque<>();
+
+        while (!currentLevelQueue.isEmpty()) {
             List<Integer> current = new ArrayList<>();
 
-            while (!preLevel.isEmpty()) {
-                TreeNode node = preLevel.poll();
+            while (!currentLevelQueue.isEmpty()) {
+                TreeNode node = currentLevelQueue.poll();
                 current.add(node.val);
 
                 if (node.left != null) {
-                    currentLevle.add(node.left);
+                    nextLevelQueue.add(node.left);
                 }
 
                 if (node.right != null) {
-                    currentLevle.add(node.right);
+                    nextLevelQueue.add(node.right);
                 }
             }
 
-            preLevel.addAll(currentLevle);
-            currentLevle.clear();
-            result.add(current);
-
+            currentLevelQueue = nextLevelQueue;
+            nextLevelQueue = new ArrayDeque<>();;
+            ans.add(current);
         }
-
-        return result;
+        return ans;
     }
 }

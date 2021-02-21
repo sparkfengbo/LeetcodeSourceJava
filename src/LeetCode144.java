@@ -1,9 +1,6 @@
 import datastruct.TreeNode;
 
-import java.util.ArrayDeque;
-import java.util.ArrayList;
-import java.util.Deque;
-import java.util.List;
+import java.util.*;
 
 /**
  * 二叉树的前序遍历
@@ -28,9 +25,9 @@ public class LeetCode144 {
         TreeNode r1 = new TreeNode(2);
         TreeNode l2 = new TreeNode(3);
         r1.left = l2;
-        root.right = r1;
+        root.left = r1;
 
-        System.out.println(preorderTraversal1(root).toString());
+        System.out.println(preorderTraversalIterate(root).toString());
     }
 
     /**
@@ -39,51 +36,45 @@ public class LeetCode144 {
      * @param root
      * @return
      */
-    public static List<Integer> preorderTraversal(TreeNode root) {
-        List<Integer> result = new ArrayList<>();
+    public static List<Integer> preorderTraversalRecurse(TreeNode root) {
+        List<Integer> res = new ArrayList<Integer>();
+        preorder(root, res);
+        return res;
+    }
 
-        if (root != null) {
-            result.add(root.val);
-
-            if (root.left != null) {
-                result.addAll(preorderTraversal(root.left));
-            }
-
-            if (root.right != null) {
-                result.addAll(preorderTraversal(root.right));
-            }
+    public static void preorder(TreeNode root, List<Integer> res) {
+        if (root == null) {
+            return;
         }
-        return result;
-
+        res.add(root.val);
+        preorder(root.left, res);
+        preorder(root.right, res);
     }
 
     /**
      * 迭代版本
      *
+     * 思路是 指针指向当前的节点，通过队列进行回溯
      * @param root
      * @return
      */
-    public static List<Integer> preorderTraversal1(TreeNode root) {
-        List<Integer> result = new ArrayList<>();
-
-        Deque<TreeNode> nodeStack = new ArrayDeque<>();
-
+    public static List<Integer> preorderTraversalIterate(TreeNode root) {
+        List<Integer> ans = new ArrayList<>();
+        Stack<TreeNode> stack = new Stack<>();
         TreeNode node = root;
-
-        while (node != null || !nodeStack.isEmpty()) {
-
+        while (node != null || !stack.isEmpty()) {
+            //把左节点全部放入栈中
             while (node != null) {
-                nodeStack.push(node);
-                result.add(node.val);
+                stack.push(node);
+                ans.add(node.val);
                 node = node.left;
             }
-
-            TreeNode tmp = nodeStack.pollFirst();
-            if (tmp != null) {
-                node = tmp.right;
-            }
+            node = stack.pop();
+            node = node.right;
         }
-
-        return result;
+        return ans;
     }
 }
+
+
+

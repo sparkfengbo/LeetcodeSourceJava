@@ -8,6 +8,20 @@ public class Utils {
         System.out.print(a);
     }
 
+    public static final <T> void print(T[] a) {
+        for (T item : a) {
+            System.out.print(item);
+        }
+        System.out.println();
+    }
+
+    public static final <T> void print(T[][] a) {
+        for (T[] item : a) {
+            print(item);
+        }
+        System.out.println();
+    }
+
     public static final <T> void println(T a) {
         System.out.println(a);
     }
