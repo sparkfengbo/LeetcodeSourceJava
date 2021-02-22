@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -14,7 +15,7 @@ import java.util.Map;
  * 因为 nums[0] + nums[1] = 2 + 7 = 9
  * 所以返回 [0, 1]
  */
-public class LeetCode1 {
+public class LeetCode1_两数之和 {
 
     public static void main(String[] args) {
 
@@ -98,7 +99,6 @@ public class LeetCode1 {
      * 空间复杂度：O(n)， 所需的额外空间取决于哈希表中存储的元素数量，该表最多需要存储 n 个元素。
      */
     public static int[] twoSum3(int[] nums, int target) {
-
         Map<Integer, Integer> map = new HashMap<>();
         for (int i = 0; i < nums.length; i++) {
             int complement = target - nums[i];
@@ -109,5 +109,7 @@ public class LeetCode1 {
         }
         throw new IllegalArgumentException("No two sum solution");
     }
+
+
 
 }

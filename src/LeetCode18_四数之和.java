@@ -4,7 +4,7 @@ import java.util.List;
 
 import static utils.Utils.printNestList;
 
-public class LeetCode18 {
+public class LeetCode18_四数之和 {
 
     public static List<List<Integer>> fourSum(int[] nums, int target) {
         int n = nums.length;
@@ -49,7 +49,6 @@ public class LeetCode18 {
         }
         return ans;
     }
-
 
     public static void main(String[] args) {
 //        printNestList(threeSum(new int[]{-1, 0, 1, 2, -1, -4}));

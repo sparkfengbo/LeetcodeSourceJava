@@ -6,7 +6,7 @@ import java.util.List;
 
 import static utils.Utils.printNestList;
 
-public class LeetCode16 {
+public class LeetCode16_最接近的三数之和 {
 
     public static int threeSumClosest2(int[] nums, int target) {
         Arrays.sort(nums);
@@ -14,15 +14,15 @@ public class LeetCode16 {
         int best = 10000000;
 
         // 枚举 a
-        for (int i = 0; i < n; ++i) {
+        for (int a = 0; a < n; ++a) {
             // 保证和上一次枚举的元素不相等
-            if (i > 0 && nums[i] == nums[i - 1]) {
+            if (a > 0 && nums[a] == nums[a - 1]) {
                 continue;
             }
             // 使用双指针枚举 b 和 c
-            int j = i + 1, k = n - 1;
+            int j = a + 1, k = n - 1;
             while (j < k) {
-                int sum = nums[i] + nums[j] + nums[k];
+                int sum = nums[a] + nums[j] + nums[k];
                 // 如果和为 target 直接返回答案
                 if (sum == target) {
                     return target;
@@ -59,22 +59,22 @@ public class LeetCode16 {
 
         Arrays.sort(nums);
 
-        for (int first = 0; first < n; first++) {
-            if (first > 0 && nums[first] == nums[first - 1]) {
+        for (int a = 0; a < n; a++) {
+            if (a > 0 && nums[a] == nums[a - 1]) {
                 continue;
             }
 
-            int third = n - 1;
-            int second = first + 1;
-//            for (int second = first + 1; second < n; second++) {
-            while (second < third) {
-                if (second > first + 1 && nums[second] == nums[second - 1]) {
+            int c = n - 1;
+            int b = a + 1;
+//            for (int second = a + 1; second < n; second++) {
+            while (b < c) {
+                if (b > a + 1 && nums[b] == nums[b - 1]) {
                     continue;
                 }
-                if (second == third) {
+                if (b == c) {
                     break;
                 }
-                int sum = nums[first] + nums[second] + nums[third];
+                int sum = nums[a] + nums[b] + nums[c];
 
                 if (sum == target) {
                     return target;
@@ -91,20 +91,20 @@ public class LeetCode16 {
 
                 if (sum > target) {
                     // 如果和大于 target，移动 c 对应的指针
-                    int k0 = third - 1;
+                    int k0 = c - 1;
                     // 移动到下一个不相等的元素
-                    while (second < k0 && nums[k0] == nums[third]) {
+                    while (b < k0 && nums[k0] == nums[c]) {
                         --k0;
                     }
-                    third = k0;
+                    c = k0;
                 } else {
                     // 如果和小于 target，移动 b 对应的指针
-                    int j0 = second + 1;
+                    int j0 = b + 1;
                     // 移动到下一个不相等的元素
-                    while (j0 < third && nums[j0] == nums[second]) {
+                    while (j0 < c && nums[j0] == nums[b]) {
                         ++j0;
                     }
-                    second = j0;
+                    b = j0;
                 }
             }
         }
