@@ -8,20 +8,18 @@ public class LeetCode137 {
 
 
     public static int singleNumber1(int[] nums) {
-        int[] count = new int[Integer.SIZE];
+        int ans = 0;
+        for (int i = 0; i < 32; i++) {
+            int total = 0;
+            for (int num : nums) {
+                total += (num >> i) & 1;
+            }
 
-        for (int i =0; i < nums.length; i++) {
-            for (int j = 0; j < count.length; j++) {
-                count[j] += (nums[i] >> j) & 1;
-                count[j] %= 3;
+            if (total % 3 != 0) {
+                ans |= (1 << i);
             }
         }
-
-        int result = 0;
-        for (int i = 0; i < count.length; i++) {
-            result += count[i] << i;
-        }
-        return result;
+        return ans;
     }
 
 }

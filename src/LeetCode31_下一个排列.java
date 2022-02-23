@@ -1,10 +1,24 @@
-public class LeetCode31 {
+import utils.Utils;
+
+public class LeetCode31_下一个排列 {
 
     public static void main(String[] args) {
         System.out.print("");
+
+        int[] test = new int[]{3,2,1};
+        nextPermutation(test);
+
+        for (int item : test) {
+            System.out.print(item);
+        }
+        System.out.println();
     }
 
-    public void nextPermutation(int[] nums) {
+    /**
+     * 可参考  https://leetcode-cn.com/problems/next-permutation/solution/xia-yi-ge-pai-lie-suan-fa-xiang-jie-si-lu-tui-dao-/
+     * @param nums
+     */
+    public static void nextPermutation(int[] nums) {
         int i = nums.length - 2;
         //从后往前 升序中找到第一个降序
         while (i >= 0 && nums[i] >= nums[i + 1]) {
@@ -19,10 +33,10 @@ public class LeetCode31 {
             }
             swap(nums, i, j);
         }
-        reverse(nums, i+1);
+        reverse(nums, i + 1);
     }
 
-    private void reverse(int[] nums, int start) {
+    private static void reverse(int[] nums, int start) {
         int i = start, j = nums.length - 1;
         while (i < j) {
             swap(nums, i, j);
@@ -31,7 +45,7 @@ public class LeetCode31 {
         }
     }
 
-    private void swap(int[] nums, int i, int j) {
+    private static void swap(int[] nums, int i, int j) {
         int temp = nums[i];
         nums[i] = nums[j];
         nums[j] = temp;

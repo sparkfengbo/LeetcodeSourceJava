@@ -1,4 +1,4 @@
-public class LeetCode66 {
+public class LeetCode66_加一 {
 
     public static void main(String[] args) {
         System.out.print(plusOne(new int[]{9}));

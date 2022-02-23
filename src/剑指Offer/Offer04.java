@@ -1,7 +1,9 @@
+package 剑指Offer;
+
 import java.util.HashSet;
 import java.util.Set;
 
-public class LeetCode_剑指offer_04 {
+public class Offer04 {
 
     public static boolean findNumberIn2DArray(int[][] matrix, int target) {
         if (matrix == null || matrix.length == 0 || matrix[0].length == 0) {

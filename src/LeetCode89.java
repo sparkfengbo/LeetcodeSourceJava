@@ -8,6 +8,8 @@ public class LeetCode89 {
         System.out.print("");
     }
 
+
+    //https://leetcode-cn.com/problems/gray-code/solution/gray-code-jing-xiang-fan-she-fa-by-jyd/
     public static List<Integer> grayCode(int n) {
         List<Integer> res = new ArrayList<Integer>(){{add(0);}};
 

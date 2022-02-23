@@ -1,4 +1,5 @@
 import java.util.HashSet;
+import java.util.Set;
 
 public class LeetCode575 {
 
@@ -6,11 +7,11 @@ public class LeetCode575 {
 
     }
 
-    public int distributeCandies(int[] candies) {
-        HashSet< Integer > set = new HashSet < > ();
-        for (int candy: candies) {
+    public int distributeCandies(int[] candyType) {
+        Set<Integer> set = new HashSet<>();
+        for (int candy : candyType) {
             set.add(candy);
         }
-        return Math.min(set.size(), candies.length / 2);
+        return Math.min(set.size(), candyType.length / 2);
     }
 }

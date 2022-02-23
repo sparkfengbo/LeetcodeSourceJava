@@ -1,4 +1,4 @@
-public class LeetCode27 {
+public class LeetCode27_移除元素 {
 
     public static void main(String[] args) {
         System.out.print("");
@@ -17,5 +17,20 @@ public class LeetCode27 {
             }
         }
         return p0 + 1;
+    }
+
+
+    public int removeElement2(int[] nums, int val) {
+        if (nums.length == 0) {
+            return 0;
+        }
+        int slow = 0;
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] == val) {
+                continue;
+            }
+            nums[slow++] = nums[i];
+        }
+        return slow;
     }
 }

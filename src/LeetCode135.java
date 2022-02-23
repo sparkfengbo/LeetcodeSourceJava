@@ -27,4 +27,33 @@ public class LeetCode135 {
         int res2 = candy(new int[]{1,2,2});
         Utils.println(res2);
     }
+
+    public static int candy2(int[] ratings) {
+
+        int n = ratings.length;
+        int[] candy = new int[n];
+        Arrays.fill(candy, 1);
+
+        for (int i = 0; i < n; i++) {
+            if (i < n - 1) {
+                if (ratings[i] > ratings[i + 1]) {
+                    if (candy[i] <= candy[i + 1]) {
+                        candy[i] = candy[i + 1] + 1;
+                        for (int j = i - 1; j >= 0; j--) {
+                            if (ratings[j] > ratings[j + 1] && candy[j] <= candy[j + 1]) {
+                                candy[j] = candy[j + 1] + 1;
+                            }
+                        }
+                    }
+                } else if (ratings[i] < ratings[i + 1]) {
+                    candy[i + 1] = candy[i] + 1;
+                }
+            }
+        }
+        int ans = 0;
+        for (Integer c : candy) {
+            ans += c;
+        }
+        return ans;
+    }
 }

@@ -1,4 +1,3 @@
-import datastruct.ListNode;
 
 public class LeetCode26_删除排序数组中的重复项 {
 

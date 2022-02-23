@@ -1,11 +1,17 @@
 import java.util.Arrays;
 
-public class LeetCode60 {
+public class LeetCode60_排列序列 {
 
     public static void main(String[] args) {
         System.out.print("");
     }
 
+    /**
+     * https://leetcode-cn.com/problems/permutation-sequence/solution/di-kge-pai-lie-by-leetcode-solution/
+     * @param n
+     * @param k
+     * @return
+     */
     public static String getPermutation(int n, int k) {
 
         int[] factorial = new int[n];
