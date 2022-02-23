@@ -1,8 +1,19 @@
 package utils;
 
+import datastruct.ListNode;
+
 import java.util.List;
 
 public class Utils {
+    public static ListNode makeListNode(int[] nums) {
+        ListNode dummy = new ListNode(0);
+        ListNode cur = dummy;
+        for (int i = 0; i < nums.length; i++) {
+            cur.next = new ListNode(nums[i]);
+            cur = cur.next;
+        }
+        return dummy.next;
+    }
 
     public static final <T> void print(T a) {
         System.out.print(a);
