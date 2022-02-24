@@ -21,6 +21,22 @@ public class LeetCode19 {
     }
 
 
+    public static ListNode removeNthFromEnd_2022(ListNode head, int n) {
+        ListNode dummy = new ListNode(0);
+        dummy.next = head;
+        ListNode slow = dummy, fast = head;
+        for (int i = 1; i < n; i++) {
+            fast = fast.next;
+        }
+        while (fast.next != null) {
+            fast = fast.next;
+            slow = slow.next;
+        }
+        slow.next = slow.next.next;
+        return dummy.next;
+    }
+
+
     /**
      * 双指针， 快慢指针
      * @param head

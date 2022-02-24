@@ -1,5 +1,8 @@
 import datastruct.ListNode;
 
+import java.util.Deque;
+import java.util.LinkedList;
+
 
 public class LeetCode143 {
 
@@ -14,28 +17,82 @@ public class LeetCode143 {
         System.out.println("");
     }
 
-    /**
-     * https://leetcode-cn.com/problems/reorder-list/solution/xiang-xi-tong-su-de-si-lu-fen-xi-duo-jie-fa-by-34/
-     * 下面的解法把循环放在前面，有点暴力，很慢
-     * @param head
-     */
-//    public static void reorderList(ListNode head) {
-//        if (head == null || head.next == null) {
-//            return;
-//        }
-//        ListNode current = head, prev = null;
-//        while (current.next != null) {
-//            prev = current;
-//            current = current.next;
-//        }
-//        if (prev != null) {
-//            prev.next = null;
-//        }
-//        ListNode subListHead = head.next;
-//        head.next = current;
-//        current.next = subListHead;
-//        reorderList(subListHead);
-//    }
+    //    作者：LeetCode-Solution
+    //    链接：https://leetcode-cn.com/problems/reorder-list/solution/zhong-pai-lian-biao-by-leetcode-solution/
+    //    来源：力扣（LeetCode）
+    //    著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+    public void reorderList_2022_1(ListNode head) {
+        if (head == null) {
+            return;
+        }
+        ListNode mid = middleNode(head);
+        ListNode l1 = head;
+        ListNode l2 = mid.next;
+        mid.next = null;
+        l2 = reverseList(l2);
+        mergeList(l1, l2);
+    }
+
+    public ListNode middleNode(ListNode head) {
+        ListNode slow = head;
+        ListNode fast = head;
+        while (fast.next != null && fast.next.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        return slow;
+    }
+
+    public ListNode reverseList(ListNode head) {
+        ListNode prev = null;
+        ListNode curr = head;
+        while (curr != null) {
+            ListNode nextTemp = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = nextTemp;
+        }
+        return prev;
+    }
+
+    public void mergeList(ListNode l1, ListNode l2) {
+        ListNode l1_tmp;
+        ListNode l2_tmp;
+        while (l1 != null && l2 != null) {
+            l1_tmp = l1.next;
+            l2_tmp = l2.next;
+
+            l1.next = l2;
+            l1 = l1_tmp;
+
+            l2.next = l1;
+            l2 = l2_tmp;
+        }
+    }
+
+
+
+    public static void reorderList_2022(ListNode head) {
+        Deque<ListNode> stack = new LinkedList<>();
+
+        ListNode cur = head;
+        while (cur!= null) {
+            stack.push(cur);
+            cur = cur.next;
+        }
+
+        cur = head;
+        while(cur != stack.peek() && cur.next.next != null) {
+            //保留尾部节点的pre节点，这样方便断链操作
+            ListNode node = stack.pop();
+            ListNode pre = stack.peek();
+            pre.next = null;
+            ListNode next = cur.next;
+            node.next = next;
+            cur.next = node;
+            cur = next;
+        }
+    }
 
     public void reorderList(ListNode head) {
         if (head == null || head.next == null || head.next.next == null) {
