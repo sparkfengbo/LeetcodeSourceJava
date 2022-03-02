@@ -2,7 +2,7 @@ package 剑指Offer;
 
 import datastruct.ListNode;
 
-public class Offer24 {
+public class Offer35 {
 
     public ListNode reverseList(ListNode head) {
         ListNode pre = null;

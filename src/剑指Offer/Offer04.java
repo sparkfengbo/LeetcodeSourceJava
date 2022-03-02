@@ -6,21 +6,19 @@ import java.util.Set;
 public class Offer04 {
 
     public static boolean findNumberIn2DArray(int[][] matrix, int target) {
-        if (matrix == null || matrix.length == 0 || matrix[0].length == 0) {
+        if (matrix.length == 0 || matrix[0].length == 0) {
             return false;
         }
-
-        int row = matrix.length;
-        int column = matrix[0].length;
-
-        int r = 0, c = column - 1;
-        while (r < row && c >= 0) {
-            if (matrix[r][c] == target) {
+        int m = matrix.length;
+        int n = matrix[0].length;
+        int row = 0, column = n - 1;
+        while (row < m && column >= 0) {
+            if (matrix[row][column] == target) {
                 return true;
-            } else if (matrix[r][c] > target) {
-                c--;
+            } else if (matrix[row][column] < target) {
+                row++;
             } else {
-                r++;
+                column--;
             }
         }
 
