@@ -73,8 +73,6 @@ public class LeetCode5 {
                     start = i - ((len - 1) / 2);
                     end = i + ((len - 1) / 2);
                 }
-//                start = i - (len - 1) / 2;
-//                end = i + len / 2;
             }
         }
         ans = s.substring(start, end + 1);
