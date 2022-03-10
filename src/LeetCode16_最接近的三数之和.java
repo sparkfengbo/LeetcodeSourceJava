@@ -20,9 +20,9 @@ public class LeetCode16_最接近的三数之和 {
                 continue;
             }
             // 使用双指针枚举 b 和 c
-            int j = a + 1, k = n - 1;
-            while (j < k) {
-                int sum = nums[a] + nums[j] + nums[k];
+            int b = a + 1, c = n - 1;
+            while (b < c) {
+                int sum = nums[a] + nums[b] + nums[c];
                 // 如果和为 target 直接返回答案
                 if (sum == target) {
                     return target;
@@ -33,20 +33,20 @@ public class LeetCode16_最接近的三数之和 {
                 }
                 if (sum > target) {
                     // 如果和大于 target，移动 c 对应的指针
-                    int k0 = k - 1;
+                    int c0 = c - 1;
                     // 移动到下一个不相等的元素
-                    while (j < k0 && nums[k0] == nums[k]) {
-                        --k0;
+                    while (b < c0 && nums[c0] == nums[c]) {
+                        --c0;
                     }
-                    k = k0;
+                    c = c0;
                 } else {
                     // 如果和小于 target，移动 b 对应的指针
-                    int j0 = j + 1;
+                    int b0 = b + 1;
                     // 移动到下一个不相等的元素
-                    while (j0 < k && nums[j0] == nums[j]) {
-                        ++j0;
+                    while (b0 < c && nums[b0] == nums[b]) {
+                        ++b0;
                     }
-                    j = j0;
+                    b = b0;
                 }
             }
         }

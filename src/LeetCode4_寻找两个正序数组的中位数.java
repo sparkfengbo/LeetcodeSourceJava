@@ -131,7 +131,7 @@ public class LeetCode4_寻找两个正序数组的中位数 {
             if (nums1[newIndex1] <= nums2[newIndex2]) {
                 k -= (newIndex1 - index1 + 1);
                 index1 = newIndex1 + 1;
-            } else {
+            } else{
                 k -= (newIndex2 - index2 + 1);
                 index2 = newIndex2 + 1;
             }

@@ -3,11 +3,10 @@ import utils.Utils;
 public class LeetCode132 {
 
     /**
-     * dp[i] = s[0:j]的最短
+     * dp[i] = s[0:i]的最短
      * <p>
-     * dp[i] =  s[0:j] 是回文   -  0
-     * s[0:j] 不是回文
-     * dp[j] + 1  0 < j < i    s[j+1:i]是回文
+     * dp[i] =  s[0:i] 是回文   -  0
+     *          s[0:i] 不是回文  - dp[j] + 1  0 < j < i    s[j+1:i]是回文
      *
      * @param s
      * @return
@@ -18,8 +17,9 @@ public class LeetCode132 {
             return 0;
         }
 
-        boolean[][] P = new boolean[n][n];
 
+        //判断是否是回文
+        boolean[][] P = new boolean[n][n];
         for (int l = 0; l < n; l++) {
             for (int i = 0; i + l < n; i++) {
                 int j = i + l;
@@ -30,10 +30,6 @@ public class LeetCode132 {
                 } else {
                     P[i][j] = s.charAt(i) == s.charAt(j) && P[i + 1][j - 1];
                 }
-//
-//                if ( ( l >= 2  || )     && s.charAt(i) == s.charAt(j) ) {
-//                    P[i][j] = true;
-//                }
             }
         }
 

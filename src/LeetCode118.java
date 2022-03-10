@@ -26,48 +26,20 @@ public class LeetCode118 {
         System.out.println(generate(5));
     }
 
+
     public static List<List<Integer>> generate(int numRows) {
-        List<List<Integer>> result = new ArrayList<>();
-
-        if (numRows <= 0) {
-            return result;
-        }
-
-        List<Integer> row1 = new ArrayList<>();
-        row1.add(1);
-        result.add(row1);
-
-        if (numRows == 1) {
-            return result;
-        }
-
-        List<Integer> row2 = new ArrayList<>();
-        row2.add(1);
-        row2.add(1);
-        result.add(row2);
-
-        if (numRows == 2) {
-            return result;
-        }
-
-        for (int i = 2; i < numRows; i++) {
+        List<List<Integer>> ans  = new ArrayList<>();
+        for (int i = 0; i < numRows; i++) {
             List<Integer> row = new ArrayList<>();
-            //index 0
-            row.add(1);
-
-            List<Integer> prevRow = result.get(i - 1);
-            if (prevRow == null) {
-                throw new NullPointerException();
+            for (int j = 0; j <= i; j++) {
+                if (j == 0 || j == i) {
+                    row.add(1);
+                } else {
+                    row.add(ans.get(i - 1).get(j - 1) + ans.get(i - 1).get(j));
+                }
             }
-
-            for (int j = 0; j < prevRow.size() - 1; j++) {
-                row.add(prevRow.get(j) + prevRow.get(j + 1));
-            }
-
-            //index length-1
-            row.add(1);
-            result.add(row);
+            ans.add(row);
         }
-        return result;
+        return ans;
     }
 }
