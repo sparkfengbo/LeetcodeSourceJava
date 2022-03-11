@@ -1,9 +1,62 @@
 import utils.Utils;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class LeetCode51 {
+
+    class Solution {
+        public List<List<String>> solveNQueens(int n) {
+            List<List<String>> solutions = new ArrayList<List<String>>();
+            int[] queens = new int[n];
+            Arrays.fill(queens, -1);
+            Set<Integer> columns = new HashSet<Integer>();
+            Set<Integer> diagonals1 = new HashSet<Integer>();
+            Set<Integer> diagonals2 = new HashSet<Integer>();
+            backtrack(solutions, queens, n, 0, columns, diagonals1, diagonals2);
+            return solutions;
+        }
+
+        public void backtrack(List<List<String>> solutions, int[] queens, int n, int row, Set<Integer> columns, Set<Integer> diagonals1, Set<Integer> diagonals2) {
+            if (row == n) {
+                List<String> board = generateBoard(queens, n);
+                solutions.add(board);
+            } else {
+                for (int i = 0; i < n; i++) {
+                    if (columns.contains(i)) {
+                        continue;
+                    }
+                    int diagonal1 = row - i;
+                    if (diagonals1.contains(diagonal1)) {
+                        continue;
+                    }
+                    int diagonal2 = row + i;
+                    if (diagonals2.contains(diagonal2)) {
+                        continue;
+                    }
+                    queens[row] = i;
+                    columns.add(i);
+                    diagonals1.add(diagonal1);
+                    diagonals2.add(diagonal2);
+                    backtrack(solutions, queens, n, row + 1, columns, diagonals1, diagonals2);
+                    queens[row] = -1;
+                    columns.remove(i);
+                    diagonals1.remove(diagonal1);
+                    diagonals2.remove(diagonal2);
+                }
+            }
+        }
+
+        public List<String> generateBoard(int[] queens, int n) {
+            List<String> board = new ArrayList<String>();
+            for (int i = 0; i < n; i++) {
+                char[] row = new char[n];
+                Arrays.fill(row, '.');
+                row[queens[i]] = 'Q';
+                board.add(new String(row));
+            }
+            return board;
+        }
+    }
 
     public static void main(String[] args) {
 //        System.out.println(myPow(4, 2));
@@ -20,18 +73,11 @@ public class LeetCode51 {
 
     public static List<List<String>> solveNQueens(int n) {
         List<List<String>> res = new ArrayList<>();
-        for (int i = 0; i < n; i++) {
-            boolean[] column = new boolean[n];
-            List<Integer> pline = new ArrayList<>();
-            List<Integer> nline = new ArrayList<>();
-            column[i] = true;
-            nline.add(0 - i);
-            pline.add(0 + i);
-            List<Integer> path = new ArrayList<>();
-            path.add(i);
-            //从第0行开始，放置皇后
-            dfs(1, column, pline, nline, n, path, res);
-        }
+        List<Integer> pline = new ArrayList<>();
+        List<Integer> nline = new ArrayList<>();
+        List<Integer> path = new ArrayList<>();
+        boolean[] column = new boolean[n];
+        dfs(0, column, pline, nline, n, path, res);
         return res;
     }
 
