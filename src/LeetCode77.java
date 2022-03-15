@@ -54,16 +54,20 @@ public class LeetCode77 {
         }
 
         private void dfs(int start, int level, int n, int k) {
+            if (n - start + 1 + level < k) {
+                return;
+            }
             if (level == k) {
                 ans.add(new ArrayList<>(path));
                 return;
             }
 
-            for (int i = start; i <= n; i++) {
-                path.add(i);
-                dfs(i + 1, level + 1, n, k);
-                path.remove(path.size() - 1);
-            }
+            path.add(start);
+            dfs(start + 1, level + 1, n, k);
+            path.remove(path.size() - 1);
+
+            dfs(start + 1, level, n, k);
+
         }
     }
 
