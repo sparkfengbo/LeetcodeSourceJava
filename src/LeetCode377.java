@@ -1,6 +1,4 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 public class LeetCode377 {
 
@@ -8,19 +6,30 @@ public class LeetCode377 {
         Solution solution = new Solution();
 //        System.out.println(solution.combinationSum2(new int[]{10, 1, 2, 7, 6, 1, 5}, 8));
 //        System.out.println(solution.combinationSum4(new int[]{2, 5, 2, 1, 2}, 5));
-        System.out.println(solution.combinationSum4(new int[]{1, 2, 3}, 4));
+        System.out.println(solution.combinationSum4(new int[]{2, 1, 3}, 35));
+//        System.out.println(solution.combinationSum4(new int[]{9}, 3));
     }
 
     static class Solution {
-//        List<List<Integer>> ans = new ArrayList<>();
-//        List<Integer> path = new ArrayList<>();
+        public int combinationSum4(int[] nums, int target) {
+            int[] dp = new int[target + 1];
+            dp[0] = 1;
+            for (int i = 1; i <= target; i++) {
+                for (int num : nums) {
+                    if (num <= i) {
+                        dp[i] += dp[i - num];
+                    }
+                }
+            }
+            return dp[target];
+        }
+    }
+
+
+    //dfs超时
+    static class Solution_dfs {
+        Map<Integer, List<Integer>> cache = new HashMap<>();
         int res = 0;
-
-//        public List<List<Integer>> combinationSum(int[] nums, int target) {
-//            dfs(nums, target);
-//            return ans;
-//        }
-
         public int combinationSum4(int[] nums, int target) {
             dfs(nums, target);
             return res;
@@ -28,7 +37,6 @@ public class LeetCode377 {
 
         private void dfs(int[] nums, int target) {
             if (target == 0) {
-//                ans.add(new ArrayList<>(path));
                 res++;
                 return;
             }
@@ -37,9 +45,7 @@ public class LeetCode377 {
                 if (target - nums[i] < 0) {
                     continue;
                 }
-//                path.add(nums[i]);
                 dfs(nums, target - nums[i]);
-//                path.remove(path.size() - 1);
             }
         }
     }
