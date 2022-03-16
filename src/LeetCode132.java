@@ -33,6 +33,7 @@ public class LeetCode132 {
             }
         }
 
+
         int[] dp = new int[n];
         for (int i = 0; i < n; i++) {
             dp[i] = i;
