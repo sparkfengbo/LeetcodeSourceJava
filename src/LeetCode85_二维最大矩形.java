@@ -9,6 +9,8 @@ public class LeetCode85_二维最大矩形 {
      *     链接：https://leetcode-cn.com/problems/maximal-rectangle/solution/zui-da-ju-xing-by-leetcode-solution-bjlu/
      *     来源：力扣（LeetCode）
      *     著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+     *
+     *     单调栈，利用了84题的解答
      * @param matrix
      * @return
      */
@@ -60,7 +62,7 @@ public class LeetCode85_二维最大矩形 {
     }
 
     //https://leetcode-cn.com/problems/maximal-rectangle/solution/zui-da-ju-xing-by-leetcode/
-
+    //速度比较快
     public int maximalRectangle(char[][] matrix) {
         if (matrix.length == 0) return 0;
         int m = matrix.length;
