@@ -24,6 +24,8 @@
   <component name="ChangeListManager">
     <list default="true" id="b4385a63-8cf5-48a1-98bf-98fe8f564c3a" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LeetCode46.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LeetCode46_全排列.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LeetCode47.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LeetCode47_全排列II.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -246,7 +248,7 @@
       <workItem from="1647394019301" duration="6084000" />
       <workItem from="1647401095302" duration="11583000" />
       <workItem from="1647415946933" duration="4475000" />
-      <workItem from="1647424822952" duration="16180000" />
+      <workItem from="1647424822952" duration="18094000" />
     </task>
     <servers />
   </component>
@@ -955,12 +957,12 @@
           <option name="timeStamp" value="239" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/LeetCode46.java</url>
+          <url>file://$PROJECT_DIR$/src/LeetCode46_全排列.java</url>
           <line>11</line>
           <option name="timeStamp" value="241" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/LeetCode47.java</url>
+          <url>file://$PROJECT_DIR$/src/LeetCode47_全排列II.java</url>
           <line>12</line>
           <option name="timeStamp" value="244" />
         </line-breakpoint>

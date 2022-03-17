@@ -3,7 +3,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-public class LeetCode46 {
+public class LeetCode46_全排列 {
     public static void main(String[] args) {
 //        List<List<Integer>> res = permute(new int[]{1, 2, 3});
 //        System.out.println(res);
@@ -35,6 +35,7 @@ public class LeetCode46 {
             vis[i] = false;
         }
     }
+
 
     //占内存，不好
 //    public static List<List<Integer>> permute(int[] nums) {
