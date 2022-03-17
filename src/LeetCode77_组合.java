@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class LeetCode77 {
+public class LeetCode77_组合 {
 
     public static void main(String[] args) {
         Solution solution = new Solution();

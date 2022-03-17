@@ -3,7 +3,7 @@ import com.sun.tools.javadoc.Start;
 import javax.swing.plaf.nimbus.AbstractRegionPainter;
 import java.util.*;
 
-public class LeetCode39 {
+public class LeetCode39_组合总和 {
 
     public static void main(String[] args) {
         Solution solution = new Solution();
