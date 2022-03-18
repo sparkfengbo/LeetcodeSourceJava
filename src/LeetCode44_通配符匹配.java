@@ -7,6 +7,11 @@ public class LeetCode44_通配符匹配 {
 
 
     /**
+     *
+     * 这个带图讲解还挺好
+     * https://leetcode-cn.com/problems/wildcard-matching/solution/yi-ge-qi-pan-kan-dong-dong-tai-gui-hua-dpsi-lu-by-/
+     *
+     * 
      * dp[i, j]
      *              p[j - 1] == ?          dp[i-1][j-1]
      *              p[j - 1] == *          dp[i-1][j] || dp[i][j-1]  //没匹配上 dp[i][j-1]  匹配上，还是dp[i-1][j]，因为*能匹配任意字符串，需要携带到新得dp中
