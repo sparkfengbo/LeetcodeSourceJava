@@ -14,6 +14,59 @@ public class LeetCode148 {
         Utils.print("");
     }
 
+    class Solution {
+        public ListNode sortList(ListNode head) {
+            if (head == null || head.next == null) {
+                return head;
+            }
+
+            if (head.next.next == null) {
+                ListNode next = head.next;
+                if (next.val < head.val) {
+                    next.next = head;
+                    head.next = null;
+                    return next;
+                }
+                return head;
+            }
+
+            ListNode slow = head;
+            ListNode fast = head;
+            while (fast != null && fast.next != null) {
+                fast = fast.next.next;
+                slow = slow.next;
+            }
+
+            ListNode next = slow.next;
+            slow.next = null;
+
+            ListNode list1 = sortList(head);
+            ListNode list2 = sortList(next);
+            ListNode dummy = new ListNode(-1);
+            ListNode cur = dummy;
+            while (list1 != null && list2 != null) {
+                if (list1.val <= list2.val) {
+                    cur.next = list1;
+                    list1 = list1.next;
+                    cur = cur.next;
+                } else {
+                    cur.next = list2;
+                    cur = cur.next;
+                    list2 = list2.next;
+                }
+            }
+            ListNode left = list1 == null ? list2 : list1;
+            while (left != null) {
+                cur.next = left;
+                left = left.next;
+                cur = cur.next;
+
+            }
+            return dummy.next;
+        }
+    }
+
+
     //https://leetcode-cn.com/problems/sort-list/solution/sort-list-gui-bing-pai-xu-lian-biao-by-jyd/
     public static ListNode sortList(ListNode head) {
         if (head == null || head.next == null) {
