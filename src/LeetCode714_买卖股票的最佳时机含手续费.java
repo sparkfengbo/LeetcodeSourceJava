@@ -1,11 +1,29 @@
 
-public class LeetCode714 {
+public class LeetCode714_买卖股票的最佳时机含手续费 {
 
     public static void main(String[] args) {
         // 8
         System.out.println(maxProfit(new int[]{1, 3, 2, 8, 4, 9}, 2));
 
     }
+
+    class Solution {
+        public int maxProfit(int[] prices, int fee) {
+            int n = prices.length;
+            int buy = prices[0] + fee;
+            int profit = 0;
+            for (int i = 1; i < n; ++i) {
+                if (prices[i] + fee < buy) {
+                    buy = prices[i] + fee;
+                } else if (prices[i] > buy) {
+                    profit += prices[i] - buy;
+                    buy = prices[i];
+                }
+            }
+            return profit;
+        }
+    }
+
 
     /**
      * dp[i][2]   dp[i][0] = cash, dp[i][1] = stock

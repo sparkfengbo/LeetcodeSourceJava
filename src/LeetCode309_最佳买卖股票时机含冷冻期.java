@@ -1,5 +1,5 @@
 
-public class LeetCode309 {
+public class LeetCode309_最佳买卖股票时机含冷冻期 {
 
     public static void main(String[] args) {
         // 3
