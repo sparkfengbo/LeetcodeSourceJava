@@ -22,10 +22,10 @@ import java.util.*;
  *   [3]
  * ]
  */
-public class LeetCode107 {
+public class LeetCode107_二叉树的层序遍历II {
 
     public static void main(String[] args) {
-        LeetCode107 leetCode107 = new LeetCode107();
+        LeetCode107_二叉树的层序遍历II leetCode107 = new LeetCode107_二叉树的层序遍历II();
 
 //        datastruct.TreeNode root = new datastruct.TreeNode(3);
 //        root.left = new datastruct.TreeNode(9);
