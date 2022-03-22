@@ -1,29 +1,31 @@
 import datastruct.TreeNode;
 
 import java.util.ArrayDeque;
+import java.util.Deque;
+import java.util.LinkedList;
 import java.util.Queue;
 
 /**
  * 对称二叉树
- *
+ * <p>
  * 给定一个二叉树，检查它是否是镜像对称的。
- *
+ * <p>
  * 例如，二叉树 [1,2,2,3,4,4,3] 是对称的。
- *
- *     1
- *    / \
- *   2   2
- *  / \ / \
+ * <p>
+ * 1
+ * / \
+ * 2   2
+ * / \ / \
  * 3  4 4  3
  * 但是下面这个 [1,2,2,null,3,null,3] 则不是镜像对称的:
- *
- *     1
- *    / \
- *   2   2
- *    \   \
- *    3    3
+ * <p>
+ * 1
+ * / \
+ * 2   2
+ * \   \
+ * 3    3
  * 说明:
- *
+ * <p>
  * 如果你可以运用递归和迭代两种方法解决这个问题，会很加分。
  */
 public class LeetCode101 {
@@ -46,6 +48,21 @@ public class LeetCode101 {
 
     }
 
+    class Solution {
+        public boolean isSymmetric(TreeNode root) {
+            return check(root, root);
+        }
+
+        public boolean check(TreeNode p, TreeNode q) {
+            if (p == null && q == null) {
+                return true;
+            }
+            if (p == null || q == null) {
+                return false;
+            }
+            return p.val == q.val && check(p.left, q.right) && check(p.right, q.left);
+        }
+    }
 
     public boolean isSymmetric(TreeNode root) {
         if (root == null) {

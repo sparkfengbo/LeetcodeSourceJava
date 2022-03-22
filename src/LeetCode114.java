@@ -42,12 +42,9 @@ public class LeetCode114 {
         leetCode101.flatten(treeNode1);
 
         System.out.println();
-
     }
 
-
     public void flatten(TreeNode root) {
-
         if (root == null) {
             return;
         }
@@ -55,13 +52,13 @@ public class LeetCode114 {
         flatten(root.left);
         flatten(root.right);
 
-        TreeNode node = root.left;
+        TreeNode left = root.left;
         TreeNode right = root.right;
-        if (node != null) {
-            while (node.right != null) {
-                node = node.right;
+        if (left != null) {
+            while (left.right != null) {
+                left = left.right;
             }
-            node.right = right;
+            left.right = right;
         }
 
         if (root.left != null) {

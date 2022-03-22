@@ -32,10 +32,10 @@ import datastruct.TreeNode;
  *  4   4
  * 返回 false 。
  */
-public class LeetCode110 {
+public class LeetCode110_平衡二叉树 {
 
     public static void main(String[] args) {
-        LeetCode110 leetCode110 = new LeetCode110();
+        LeetCode110_平衡二叉树 leetCode110 = new LeetCode110_平衡二叉树();
 
         TreeNode node = new TreeNode(3);
         node.left = new TreeNode(9);
