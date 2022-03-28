@@ -1,4 +1,12 @@
-public class LeetCode96 {
+import datastruct.TreeNode;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+public class LeetCode96_不同的二叉搜索树 {
+
     /**
      * 有序序列 1 ~ n
      * G[n] 长度为 n 的序列能构成的不同二叉搜索树的个数。

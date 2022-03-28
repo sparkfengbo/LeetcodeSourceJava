@@ -21,13 +21,35 @@ import java.util.Arrays;
  *    /   /
  *  -10  5
  */
-public class LeetCode108 {
+public class LeetCode108_将有序数组转换为二叉搜索树 {
 
     public static void main(String[] args) {
         TreeNode result = sortedArrayToBST(new int[]{-10,-3,0,5,9});
 
         System.out.println();
 
+    }
+
+    class Solution {
+        public TreeNode sortedArrayToBST(int[] nums) {
+            int n = nums.length - 1;
+            return myBuildTree(nums, 0, n);
+        }
+
+        private TreeNode myBuildTree(int[] nums, int left, int right) {
+            int length = right - left + 1;
+            if (length <= 0) {
+                return null;
+            } else if (length == 1) {
+                return new TreeNode(nums[left]);
+            }
+
+            int mid = (left + right) /2 ;
+            TreeNode root = new TreeNode(nums[mid]);
+            root.left = myBuildTree(nums, left, mid - 1);
+            root.right = myBuildTree(nums, mid + 1, right);
+            return root;
+        }
     }
 
     public static  TreeNode sortedArrayToBST(int[] nums) {
