@@ -23,10 +23,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b4385a63-8cf5-48a1-98bf-98fe8f564c3a" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/LeetCode111_二叉树的最小深度.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LeetCode108.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LeetCode108_将有序数组转换为二叉搜索树.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LeetCode95.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LeetCode95_不同的二叉搜索树II.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LeetCode96.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LeetCode96_不同的二叉搜索树.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LeetCode104.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LeetCode104_二叉树的最大深度.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LeetCode111.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -255,7 +255,7 @@
       <workItem from="1647394019301" duration="6084000" />
       <workItem from="1647401095302" duration="11583000" />
       <workItem from="1647415946933" duration="4475000" />
-      <workItem from="1647424822952" duration="93981000" />
+      <workItem from="1647424822952" duration="98771000" />
     </task>
     <servers />
   </component>
