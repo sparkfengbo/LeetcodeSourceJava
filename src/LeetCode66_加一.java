@@ -5,9 +5,9 @@ public class LeetCode66_加一 {
     }
 
     public static int[] plusOne(int[] digits) {
-
+        int n = digits.length;
         boolean carry = false;
-        for (int i = digits.length - 1; i >= 0; i--) {
+        for (int i = n - 1; i >= 0; i--) {
             digits[i] += 1;
             carry = digits[i] >= 10;
             digits[i] %= 10;
@@ -15,12 +15,9 @@ public class LeetCode66_加一 {
                 return digits;
             }
         }
-        if (carry) {
-            int[] ans = new int[digits.length + 1];
-            System.arraycopy(digits, 0, ans, 1, digits.length);
-            ans[0] = 1;
-            return ans;
-        }
-        return digits;
+        // digits 中所有的元素均为 9
+        int[] ans = new int[n + 1];
+        ans[0] = 1;
+        return ans;
     }
 }

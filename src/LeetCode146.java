@@ -86,7 +86,7 @@ public class LeetCode146 {
                 return;
             }
 
-            if (capacity == mMaps.size()) {
+            if (capacity == mMaps.size ()) {
                 // 删除队首
                 Node r = dummyHead.after;
                 dummyHead.after.after.before = dummyHead;

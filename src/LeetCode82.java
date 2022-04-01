@@ -44,6 +44,31 @@ public class LeetCode82 {
 
     }
 
+    class Solution {
+        public ListNode deleteDuplicates(ListNode head) {
+            if (head == null) return head;
+            ListNode dummyNode = new ListNode(-1);
+            dummyNode.next = head;
+            ListNode cur = head;
+            ListNode pre = dummyNode;
+
+            while (cur != null && cur.next != null) {
+                if (cur.val != cur.next.val) {
+                    pre = cur;
+                    cur = cur.next;
+                } else {
+                    ListNode p = cur.next;
+                    while (p != null && p.val == cur.val) {
+                        p = p.next;
+                    }
+                    pre.next = p;
+                    cur  = p;
+                }
+            }
+            return dummyNode.next;
+        }
+    }
+
 
     /**
      * 思路： 两边遍历

@@ -8,6 +8,29 @@ public class LeetCode90_子集II {
 
     }
 
+    class Solution {
+        List<List<Integer>> res = new ArrayList<>();
+
+        public List<List<Integer>> subsetsWithDup(int[] nums) {
+            Arrays.sort(nums);
+            backTrace(nums, 0, new ArrayList<>());
+            return res;
+        }
+
+        public void backTrace(int[] nums, int index, List<Integer> path){
+            res.add(new ArrayList<>(path));
+            for(int i = index; i < nums.length; ++i){
+                //剔除重复元素
+                if(i != index && nums[i] == nums[i - 1]){
+                    continue;
+                }
+                path.add(nums[i]);
+                backTrace(nums, i + 1, path);
+                path.remove(path.size() - 1);
+            }
+        }
+    }
+
     class Solution_Iter {
         List<Integer> t = new ArrayList<Integer>();
         List<List<Integer>> ans = new ArrayList<List<Integer>>();
@@ -53,9 +76,9 @@ public class LeetCode90_子集II {
 
 
         /**
-         * 考虑数组 [1,2,2][1,2,2]，选择前两个数，或者第一、三个数，都会得到相同的子集。
+         * 考虑数组 [1,2,2]，选择前两个数，或者第一、三个数，都会得到相同的子集。
          *
-         * 也就是说，对于当前选择的数 xx，若前面有与其相同的数 yy，且没有选择 yy，此时包含 xx 的子集，必然会出现在包含 yy 的所有子集中。
+         * 也就是说，对于当前选择的数 x，若前面有与其相同的数 y，且没有选择 y，此时包含 x 的子集，必然会出现在包含 y 的所有子集中。
          *
          * 我们可以通过判断这种情况，来避免生成重复的子集。
          *

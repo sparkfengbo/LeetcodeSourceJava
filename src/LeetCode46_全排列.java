@@ -12,6 +12,35 @@ public class LeetCode46_全排列 {
         System.out.println(res);
     }
 
+    class Solution {
+        List<List<Integer>> ans = new ArrayList<>();
+
+        public List<List<Integer>> permute(int[] nums) {
+            dfs(0, new boolean[nums.length], new ArrayList<>(), nums);
+            return ans;
+        }
+
+        private void dfs(int index, boolean[] visited, List<Integer> path, int[] nums) {
+            if (index == nums.length) {
+                ans.add(new ArrayList<>(path));
+                return;
+            }
+
+            for (int i = 0; i < nums.length; i++) {
+                if (visited[i]) {
+                    continue;
+                }
+
+                path.add(nums[i]);
+                visited[i] = true;
+                dfs(index + 1, visited, path, nums);
+                path.remove(path.size() - 1);
+                visited[i] = false;
+            }
+        }
+
+    }
+
     public static List<List<Integer>> dfsPermute(int[] nums) {
         List ans = new ArrayList();
         boolean[] vis = new boolean[nums.length];
