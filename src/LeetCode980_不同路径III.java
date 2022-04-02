@@ -1,4 +1,4 @@
-public class LeetCode980 {
+public class LeetCode980_不同路径III {
 
     public static void main(String[] args) {
         Solution solution = new Solution();

@@ -1,11 +1,11 @@
 
-public class LeetCode117 {
+public class LeetCode117_填充每个节点的下一个右侧节点指针II {
 
     static class Node {
         public int val;
-        public  Node left;
-        public  Node right;
-        public  Node next;
+        public Node left;
+        public Node right;
+        public Node next;
 
         public Node() {
         }
@@ -14,7 +14,7 @@ public class LeetCode117 {
             val = _val;
         }
 
-        public Node(int _val,  Node _left, Node _right,  Node _next) {
+        public Node(int _val, Node _left, Node _right, Node _next) {
             val = _val;
             left = _left;
             right = _right;
@@ -28,7 +28,7 @@ public class LeetCode117 {
                 return root;
             }
             Node leftmost = root;
-            while (leftmost != null &&( leftmost.left != null || leftmost.right != null)) {
+            while (leftmost != null && (leftmost.left != null || leftmost.right != null)) {
                 Node head = leftmost;
                 while (head != null) {
                     if (head.left != null) {
@@ -40,7 +40,7 @@ public class LeetCode117 {
                                 next = next.next;
                             }
                             if (next != null) {
-                                head.left.next = next.left != null ?next.left: next.right;
+                                head.left.next = next.left != null ? next.left : next.right;
                             }
                         }
                     }
@@ -51,7 +51,7 @@ public class LeetCode117 {
                             next = next.next;
                         }
                         if (next != null) {
-                            head.right.next = next.left != null ?next.left: next.right;
+                            head.right.next = next.left != null ? next.left : next.right;
                         }
                     }
 

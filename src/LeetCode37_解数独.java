@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class LeetCode37 {
+public class LeetCode37_解数独 {
 
     public static void main(String[] args) {
         System.out.print("");

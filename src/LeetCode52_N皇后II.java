@@ -5,7 +5,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-public class LeetCode52 {
+public class LeetCode52_N皇后II {
 
     class Solution {
         public int totalNQueens(int n) {

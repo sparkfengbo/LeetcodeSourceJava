@@ -11,7 +11,7 @@ public class LeetCode95_不同的二叉搜索树II {
      * 来源：力扣（LeetCode）
      * 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
      */
-    class Solution {
+    static class Solution {
         public List<TreeNode> generateTrees(int n) {
             if (n == 0) {
                 return new LinkedList<TreeNode>();
@@ -49,7 +49,8 @@ public class LeetCode95_不同的二叉搜索树II {
     }
 
     public static void main(String[] args) {
-
+        Solution solution = new Solution();
+        solution.generateTrees(3);
 
     }
 }

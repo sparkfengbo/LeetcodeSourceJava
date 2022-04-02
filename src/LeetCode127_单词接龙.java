@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class LeetCode127 {
+public class LeetCode127_单词接龙 {
     public static class Solution {
         Map<String, Integer> wordId = new HashMap<>();
         List<List<Integer>> edge = new ArrayList<>();

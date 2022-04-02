@@ -3,7 +3,7 @@ import javafx.util.Pair;
 import java.util.HashSet;
 import java.util.Set;
 
-public class LeetCode79 {
+public class LeetCode79_单词搜索 {
 
     public static void main(String[] args) {
 

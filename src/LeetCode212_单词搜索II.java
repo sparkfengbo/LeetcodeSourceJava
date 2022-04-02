@@ -4,7 +4,7 @@ import utils.Utils;
 
 import java.util.*;
 
-public class LeetCode212 {
+public class LeetCode212_单词搜索II {
 
     public static void main(String[] args) {
         Solution solution = new Solution();

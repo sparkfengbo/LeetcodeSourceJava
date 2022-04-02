@@ -2,7 +2,61 @@ import utils.Utils;
 
 import java.util.*;
 
-public class LeetCode51 {
+public class LeetCode51_N皇后 {
+    class Solution_simple {
+        List<List<String>> solutions = new ArrayList<List<String>>();
+        Set<Integer> columns = new HashSet<Integer>();
+        Set<Integer> diagonals1 = new HashSet<Integer>();
+        Set<Integer> diagonals2 = new HashSet<Integer>();
+
+        public List<List<String>> solveNQueens(int n) {
+            int[] queens = new int[n];
+            Arrays.fill(queens, -1);
+            backtrack(queens, n, 0);
+            return solutions;
+        }
+
+        public void backtrack(int[] queens, int n, int row) {
+            if (row == n) {
+                List<String> board = generateBoard(queens, n);
+                solutions.add(board);
+            } else {
+                for (int i = 0; i < n; i++) {
+                    if (columns.contains(i)) {
+                        continue;
+                    }
+                    int diagonal1 = row - i;
+                    if (diagonals1.contains(diagonal1)) {
+                        continue;
+                    }
+                    int diagonal2 = row + i;
+                    if (diagonals2.contains(diagonal2)) {
+                        continue;
+                    }
+                    queens[row] = i;
+                    columns.add(i);
+                    diagonals1.add(diagonal1);
+                    diagonals2.add(diagonal2);
+                    backtrack(queens, n, row + 1);
+                    queens[row] = -1;
+                    columns.remove(i);
+                    diagonals1.remove(diagonal1);
+                    diagonals2.remove(diagonal2);
+                }
+            }
+        }
+
+        public List<String> generateBoard(int[] queens, int n) {
+            List<String> board = new ArrayList<String>();
+            for (int i = 0; i < n; i++) {
+                char[] row = new char[n];
+                Arrays.fill(row, '.');
+                row[queens[i]] = 'Q';
+                board.add(new String(row));
+            }
+            return board;
+        }
+    }
 
     class Solution {
         public List<List<String>> solveNQueens(int n) {

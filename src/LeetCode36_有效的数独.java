@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class LeetCode36 {
+public class LeetCode36_有效的数独 {
 
     public static void main(String[] args) {
         System.out.print("");

@@ -3,7 +3,7 @@ import datastruct.Node;
 import java.util.Deque;
 import java.util.LinkedList;
 
-public class LeetCode116 {
+public class LeetCode116_填充每个节点的下一个右侧节点指针 {
 
     static class Node {
         public int val;
@@ -28,8 +28,7 @@ public class LeetCode116 {
 
     static class Solution {
         public Node connect(Node root) {
-//            || (root.left == null && root.right == null)
-            if (root == null) {
+            if(root == null) {
                 return root;
             }
             Deque<Node> queue = new LinkedList<>();
@@ -58,7 +57,7 @@ public class LeetCode116 {
      * 链接：https://leetcode-cn.com/problems/populating-next-right-pointers-in-each-node/solution/tian-chong-mei-ge-jie-dian-de-xia-yi-ge-you-ce-2-4/
      * 来源：力扣（LeetCode）
      * 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
-     *
+     * <p>
      * 空间复杂度 O(1)
      */
     class Solution_O1 {

@@ -70,6 +70,8 @@ public class LeetCode40_组合总和II {
                 return;
             }
             for (int i = startIndex; i < candidates.length && sum + candidates[i] <= target; i++) {
+                //used[i - 1] == true ,说明同一树枝candidate[i - 1] 使用过
+                //used[i - 1] == false; 说明同一树层candidate[i - 1] 使用过
                 //对同一树层使用过的元素进行跳过
                 if (i > startIndex && candidates[i] == candidates[i - 1]) {
                     continue;

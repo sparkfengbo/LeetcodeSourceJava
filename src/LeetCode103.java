@@ -20,6 +20,38 @@ public class LeetCode103 {
 
     class Solution {
         public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
+            List<List<Integer>> ans = new ArrayList<>();
+            if (root == null) {
+                return ans;
+            }
+
+            Queue<TreeNode> queue = new LinkedList<>();
+            queue.offer(root);
+            boolean left2right = true;
+            while (!queue.isEmpty()) {
+                List<Integer> level = new ArrayList<>();
+
+                int currentSize = queue.size();
+                for (int i = 0; i < currentSize; ++i) {
+                    TreeNode node = queue.poll();
+                    if (!left2right) {
+                        level.add(0, node.val);
+                    } else {
+                        level.add(node.val);
+                    }
+                    if (node.left != null) {
+                        queue.offer(node.left);
+                    }
+                    if (node.right != null) {
+                        queue.offer(node.right);
+                    }
+                }
+                ans.add(level);
+                left2right = !left2right;
+            }
+            return ans;
+        }
+        public List<List<Integer>> zigzagLevelOrder_(TreeNode root) {
             List<List<Integer>> res = new ArrayList<>();
             if (root == null) {
                 return res;

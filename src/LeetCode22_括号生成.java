@@ -2,7 +2,7 @@ import datastruct.ListNode;
 
 import java.util.*;
 
-public class LeetCode22 {
+public class LeetCode22_括号生成 {
     public static void main(String[] args) {
         Solution solution = new Solution();
 //        System.out.println(solution.generateParenthesis(1));

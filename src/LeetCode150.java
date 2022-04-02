@@ -1,6 +1,8 @@
 import datastruct.ListNode;
 import utils.Utils;
 
+import java.util.Deque;
+import java.util.LinkedList;
 import java.util.Stack;
 
 public class LeetCode150 {
@@ -13,6 +15,41 @@ public class LeetCode150 {
 
         //6
         Utils.println(evalRPN(new String[]{"4","13","5","/","+"}));
+    }
+
+    class Solution {
+        public int evalRPN(String[] tokens) {
+            int res= 0;
+            Deque<Integer> stack = new LinkedList<>();
+            int n = tokens.length;
+            for (int i = 0; i < n; i++) {
+                String s = tokens[i];
+                if (s.equals("+") || s.equals("-")|| s.equals("*")|| s.equals("/") ) {
+                    int a = stack.pop();
+                    int b = stack.pop();
+                    int r = 0;
+                    switch (s) {
+                        case "+":
+                            r = a + b;
+                            break;
+                        case "-":
+                            r = b - a;
+                            break;
+                        case "*":
+                            r = a * b;
+                            break;
+                        case "/":
+                            r = b / a;
+                            break;
+                    }
+                    stack.push(r);
+                } else {
+                    stack.push(Integer.valueOf(s));
+                }
+            }
+
+            return stack.isEmpty() ? 0 : stack.peek();
+        }
     }
 
     public static int evalRPN(String[] tokens) {

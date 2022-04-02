@@ -12,10 +12,10 @@ public class LeetCode96_不同的二叉搜索树 {
      * G[n] 长度为 n 的序列能构成的不同二叉搜索树的个数。
      * F[i,n]为 以 i 为根、序列长度为 n 的不同二叉搜索树个数 (1≤i≤n)。
      *
-     * G[0] = 0 G[1] = 1
+     * G[0] = 1 G[1] = 1
      *
      * G[i] = sum F[i,n]  1 <= i <=n
-     * F[i，n] = G[i-1] * G[n-1]
+     * F[i，n] = G[i-1] * G[n-i]
      * @param n
      * @return
      */

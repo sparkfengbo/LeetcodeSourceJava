@@ -39,6 +39,31 @@ public class LeetCode39_组合总和 {
         }
     }
 
+    class Solution__ {
+        List<List<Integer>> res = new ArrayList<>();
+        List<Integer> path = new ArrayList<>();
+
+        public List<List<Integer>> combinationSum(int[] candidates, int target) {
+            Arrays.sort(candidates);
+            backtrack(candidates, target, 0, 0);
+            return res;
+        }
+
+        private void backtrack(int[] candidates, int target, int sum, int startIndex) {
+            if (sum == target) {
+                res.add(new ArrayList<>(path));
+                return;
+            }
+            for (int i = startIndex; i < candidates.length && sum + candidates[i] <= target; i++) {
+                sum += candidates[i];
+                path.add(candidates[i]);
+                backtrack(candidates, target, sum, i);
+                sum -= candidates[i];
+                path.remove(path.size() - 1);
+            }
+        }
+    }
+
 
     static class Solution {
         public List<List<Integer>> combinationSum(int[] candidates, int target) {

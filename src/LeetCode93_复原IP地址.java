@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 
-public class LeetCode93 {
+public class LeetCode93_复原IP地址 {
     public static void main(String[] args) {
         Solution solution = new Solution();
 //        System.out.println(solution.generateParenthesis(1));
@@ -10,6 +10,7 @@ public class LeetCode93 {
         System.out.println(solution.restoreIpAddresses("0000"));
         System.out.println(solution.restoreIpAddresses("101023"));
     }
+
 
     static class Solution {
         List<String> ans = new ArrayList<>();
