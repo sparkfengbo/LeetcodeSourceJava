@@ -22,7 +22,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b4385a63-8cf5-48a1-98bf-98fe8f564c3a" name="Default" comment="" />
+    <list default="true" id="b4385a63-8cf5-48a1-98bf-98fe8f564c3a" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LeetCode129_求根节点到叶节点数字之和.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LeetCode129_求根节点到叶节点数字之和.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LeetCode56.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LeetCode56.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LeetCode57.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LeetCode57.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LeetCode7.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LeetCode7.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LeetCode9.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LeetCode9.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -77,7 +84,7 @@
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.LeetCode95_不同的二叉搜索树II">
+  <component name="RunManager" selected="Application.LeetCode54">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
     </configuration>
@@ -118,16 +125,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LeetCode331" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="LeetCode331" />
+    <configuration name="LeetCode496_下一个更大元素I" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="LeetCode496_下一个更大元素I" />
       <module name="LeetcodeSourceJava" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LeetCode496_下一个更大元素I" type="Application" factoryName="Application" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="LeetCode496_下一个更大元素I" />
+    <configuration name="LeetCode54" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="LeetCode54" />
       <module name="LeetcodeSourceJava" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <method v="2">
@@ -189,19 +196,19 @@
     <list>
       <item itemvalue="Application.LeetCode324" />
       <item itemvalue="Application.LeetCode496_下一个更大元素I" />
-      <item itemvalue="Application.LeetCode331" />
       <item itemvalue="Application.L1626" />
       <item itemvalue="Application.LeetCode127_单词接龙" />
       <item itemvalue="Application.LeetCode212_单词搜索II" />
       <item itemvalue="Application.LeetCode95_不同的二叉搜索树II" />
+      <item itemvalue="Application.LeetCode54" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.LeetCode54" />
         <item itemvalue="Application.LeetCode95_不同的二叉搜索树II" />
         <item itemvalue="Application.LeetCode212_单词搜索II" />
         <item itemvalue="Application.LeetCode127_单词接龙" />
         <item itemvalue="Application.L1626" />
-        <item itemvalue="Application.LeetCode331" />
       </list>
     </recent_temporary>
   </component>
@@ -250,7 +257,7 @@
       <workItem from="1647394019301" duration="6084000" />
       <workItem from="1647401095302" duration="11583000" />
       <workItem from="1647415946933" duration="4475000" />
-      <workItem from="1647424822952" duration="144173000" />
+      <workItem from="1647424822952" duration="156355000" />
     </task>
     <servers />
   </component>
@@ -306,70 +313,70 @@
       <screen x="0" y="23" width="1920" height="1177" />
     </state>
     <state x="100" y="123" width="1720" height="977" key="DiffContextDialog/-1235.23.1235.777/0.23.1920.1177@0.23.1920.1177" timestamp="1648864056728" />
-    <state width="1878" height="296" key="GridCell.Tab.0.bottom" timestamp="1648880568441">
+    <state width="1878" height="296" key="GridCell.Tab.0.bottom" timestamp="1649239660121">
       <screen x="0" y="23" width="1920" height="1177" />
     </state>
     <state width="1878" height="253" key="GridCell.Tab.0.bottom/-1228.23.1228.777/0.23.1920.1177@0.23.1920.1177" timestamp="1646124688135" />
     <state width="1878" height="455" key="GridCell.Tab.0.bottom/-1230.23.1230.777/0.23.1920.1177@0.23.1920.1177" timestamp="1647712076664" />
     <state width="1878" height="291" key="GridCell.Tab.0.bottom/-1232.23.1232.777/0.23.1920.1177@0.23.1920.1177" timestamp="1648211299404" />
     <state width="1878" height="343" key="GridCell.Tab.0.bottom/-1234.23.1234.777/0.23.1920.1177@0.23.1920.1177" timestamp="1648438572475" />
-    <state width="1878" height="296" key="GridCell.Tab.0.bottom/-1235.23.1235.777/0.23.1920.1177@0.23.1920.1177" timestamp="1648880568441" />
-    <state width="1878" height="296" key="GridCell.Tab.0.center" timestamp="1648880568440">
+    <state width="1878" height="296" key="GridCell.Tab.0.bottom/-1235.23.1235.777/0.23.1920.1177@0.23.1920.1177" timestamp="1649239660121" />
+    <state width="1878" height="296" key="GridCell.Tab.0.center" timestamp="1649239660120">
       <screen x="0" y="23" width="1920" height="1177" />
     </state>
     <state width="1878" height="253" key="GridCell.Tab.0.center/-1228.23.1228.777/0.23.1920.1177@0.23.1920.1177" timestamp="1646124688135" />
     <state width="1878" height="455" key="GridCell.Tab.0.center/-1230.23.1230.777/0.23.1920.1177@0.23.1920.1177" timestamp="1647712076662" />
     <state width="1878" height="291" key="GridCell.Tab.0.center/-1232.23.1232.777/0.23.1920.1177@0.23.1920.1177" timestamp="1648211299403" />
     <state width="1878" height="343" key="GridCell.Tab.0.center/-1234.23.1234.777/0.23.1920.1177@0.23.1920.1177" timestamp="1648438572474" />
-    <state width="1878" height="296" key="GridCell.Tab.0.center/-1235.23.1235.777/0.23.1920.1177@0.23.1920.1177" timestamp="1648880568440" />
-    <state width="1878" height="296" key="GridCell.Tab.0.left" timestamp="1648880568440">
+    <state width="1878" height="296" key="GridCell.Tab.0.center/-1235.23.1235.777/0.23.1920.1177@0.23.1920.1177" timestamp="1649239660120" />
+    <state width="1878" height="296" key="GridCell.Tab.0.left" timestamp="1649239660120">
       <screen x="0" y="23" width="1920" height="1177" />
     </state>
     <state width="1878" height="253" key="GridCell.Tab.0.left/-1228.23.1228.777/0.23.1920.1177@0.23.1920.1177" timestamp="1646124688134" />
     <state width="1878" height="455" key="GridCell.Tab.0.left/-1230.23.1230.777/0.23.1920.1177@0.23.1920.1177" timestamp="1647712076661" />
     <state width="1878" height="291" key="GridCell.Tab.0.left/-1232.23.1232.777/0.23.1920.1177@0.23.1920.1177" timestamp="1648211299403" />
     <state width="1878" height="343" key="GridCell.Tab.0.left/-1234.23.1234.777/0.23.1920.1177@0.23.1920.1177" timestamp="1648438572473" />
-    <state width="1878" height="296" key="GridCell.Tab.0.left/-1235.23.1235.777/0.23.1920.1177@0.23.1920.1177" timestamp="1648880568440" />
-    <state width="1878" height="296" key="GridCell.Tab.0.right" timestamp="1648880568441">
+    <state width="1878" height="296" key="GridCell.Tab.0.left/-1235.23.1235.777/0.23.1920.1177@0.23.1920.1177" timestamp="1649239660120" />
+    <state width="1878" height="296" key="GridCell.Tab.0.right" timestamp="1649239660121">
       <screen x="0" y="23" width="1920" height="1177" />
     </state>
     <state width="1878" height="253" key="GridCell.Tab.0.right/-1228.23.1228.777/0.23.1920.1177@0.23.1920.1177" timestamp="1646124688135" />
     <state width="1878" height="455" key="GridCell.Tab.0.right/-1230.23.1230.777/0.23.1920.1177@0.23.1920.1177" timestamp="1647712076663" />
     <state width="1878" height="291" key="GridCell.Tab.0.right/-1232.23.1232.777/0.23.1920.1177@0.23.1920.1177" timestamp="1648211299404" />
     <state width="1878" height="343" key="GridCell.Tab.0.right/-1234.23.1234.777/0.23.1920.1177@0.23.1920.1177" timestamp="1648438572474" />
-    <state width="1878" height="296" key="GridCell.Tab.0.right/-1235.23.1235.777/0.23.1920.1177@0.23.1920.1177" timestamp="1648880568441" />
-    <state width="1878" height="296" key="GridCell.Tab.1.bottom" timestamp="1648880568716">
+    <state width="1878" height="296" key="GridCell.Tab.0.right/-1235.23.1235.777/0.23.1920.1177@0.23.1920.1177" timestamp="1649239660121" />
+    <state width="1878" height="296" key="GridCell.Tab.1.bottom" timestamp="1649239660123">
       <screen x="0" y="23" width="1920" height="1177" />
     </state>
     <state width="1878" height="253" key="GridCell.Tab.1.bottom/-1228.23.1228.777/0.23.1920.1177@0.23.1920.1177" timestamp="1646124688137" />
     <state width="1878" height="455" key="GridCell.Tab.1.bottom/-1230.23.1230.777/0.23.1920.1177@0.23.1920.1177" timestamp="1647712076847" />
     <state width="1878" height="291" key="GridCell.Tab.1.bottom/-1232.23.1232.777/0.23.1920.1177@0.23.1920.1177" timestamp="1648211299407" />
     <state width="1878" height="343" key="GridCell.Tab.1.bottom/-1234.23.1234.777/0.23.1920.1177@0.23.1920.1177" timestamp="1648438572483" />
-    <state width="1878" height="296" key="GridCell.Tab.1.bottom/-1235.23.1235.777/0.23.1920.1177@0.23.1920.1177" timestamp="1648880568716" />
-    <state width="1878" height="296" key="GridCell.Tab.1.center" timestamp="1648880568715">
+    <state width="1878" height="296" key="GridCell.Tab.1.bottom/-1235.23.1235.777/0.23.1920.1177@0.23.1920.1177" timestamp="1649239660123" />
+    <state width="1878" height="296" key="GridCell.Tab.1.center" timestamp="1649239660122">
       <screen x="0" y="23" width="1920" height="1177" />
     </state>
     <state width="1878" height="253" key="GridCell.Tab.1.center/-1228.23.1228.777/0.23.1920.1177@0.23.1920.1177" timestamp="1646124688136" />
     <state width="1878" height="455" key="GridCell.Tab.1.center/-1230.23.1230.777/0.23.1920.1177@0.23.1920.1177" timestamp="1647712076846" />
     <state width="1878" height="291" key="GridCell.Tab.1.center/-1232.23.1232.777/0.23.1920.1177@0.23.1920.1177" timestamp="1648211299406" />
     <state width="1878" height="343" key="GridCell.Tab.1.center/-1234.23.1234.777/0.23.1920.1177@0.23.1920.1177" timestamp="1648438572478" />
-    <state width="1878" height="296" key="GridCell.Tab.1.center/-1235.23.1235.777/0.23.1920.1177@0.23.1920.1177" timestamp="1648880568715" />
-    <state width="1878" height="296" key="GridCell.Tab.1.left" timestamp="1648880568713">
+    <state width="1878" height="296" key="GridCell.Tab.1.center/-1235.23.1235.777/0.23.1920.1177@0.23.1920.1177" timestamp="1649239660122" />
+    <state width="1878" height="296" key="GridCell.Tab.1.left" timestamp="1649239660122">
       <screen x="0" y="23" width="1920" height="1177" />
     </state>
     <state width="1878" height="253" key="GridCell.Tab.1.left/-1228.23.1228.777/0.23.1920.1177@0.23.1920.1177" timestamp="1646124688136" />
     <state width="1878" height="455" key="GridCell.Tab.1.left/-1230.23.1230.777/0.23.1920.1177@0.23.1920.1177" timestamp="1647712076845" />
     <state width="1878" height="291" key="GridCell.Tab.1.left/-1232.23.1232.777/0.23.1920.1177@0.23.1920.1177" timestamp="1648211299405" />
     <state width="1878" height="343" key="GridCell.Tab.1.left/-1234.23.1234.777/0.23.1920.1177@0.23.1920.1177" timestamp="1648438572477" />
-    <state width="1878" height="296" key="GridCell.Tab.1.left/-1235.23.1235.777/0.23.1920.1177@0.23.1920.1177" timestamp="1648880568713" />
-    <state width="1878" height="296" key="GridCell.Tab.1.right" timestamp="1648880568715">
+    <state width="1878" height="296" key="GridCell.Tab.1.left/-1235.23.1235.777/0.23.1920.1177@0.23.1920.1177" timestamp="1649239660122" />
+    <state width="1878" height="296" key="GridCell.Tab.1.right" timestamp="1649239660122">
       <screen x="0" y="23" width="1920" height="1177" />
     </state>
     <state width="1878" height="253" key="GridCell.Tab.1.right/-1228.23.1228.777/0.23.1920.1177@0.23.1920.1177" timestamp="1646124688136" />
     <state width="1878" height="455" key="GridCell.Tab.1.right/-1230.23.1230.777/0.23.1920.1177@0.23.1920.1177" timestamp="1647712076846" />
     <state width="1878" height="291" key="GridCell.Tab.1.right/-1232.23.1232.777/0.23.1920.1177@0.23.1920.1177" timestamp="1648211299406" />
     <state width="1878" height="343" key="GridCell.Tab.1.right/-1234.23.1234.777/0.23.1920.1177@0.23.1920.1177" timestamp="1648438572479" />
-    <state width="1878" height="296" key="GridCell.Tab.1.right/-1235.23.1235.777/0.23.1920.1177@0.23.1920.1177" timestamp="1648880568715" />
+    <state width="1878" height="296" key="GridCell.Tab.1.right/-1235.23.1235.777/0.23.1920.1177@0.23.1920.1177" timestamp="1649239660122" />
     <state x="689" y="321" key="RollbackChangesDialog" timestamp="1647332912213">
       <screen x="0" y="23" width="1920" height="1177" />
     </state>
@@ -407,19 +414,20 @@
       <screen x="0" y="23" width="1920" height="1177" />
     </state>
     <state x="698" y="367" key="extract.method.dialog/-1232.23.1232.777/0.23.1920.1177@0.23.1920.1177" timestamp="1644380641513" />
-    <state x="661" y="244" width="598" height="735" key="find.popup" timestamp="1648873376302">
+    <state x="378" y="197" width="598" height="735" key="find.popup" timestamp="1649234849646">
       <screen x="0" y="23" width="1920" height="1177" />
     </state>
     <state x="661" y="244" width="985" height="942" key="find.popup/-1228.23.1228.777/0.23.1920.1177@0.23.1920.1177" timestamp="1646125520090" />
     <state x="661" y="244" width="970" height="916" key="find.popup/-1230.23.1230.777/0.23.1920.1177@0.23.1920.1177" timestamp="1647711057290" />
     <state x="661" y="244" width="1167" height="735" key="find.popup/-1232.23.1232.777/0.23.1920.1177@0.23.1920.1177" timestamp="1648211542006" />
     <state x="661" y="244" width="598" height="735" key="find.popup/-1234.23.1234.777/0.23.1920.1177@0.23.1920.1177" timestamp="1645160568602" />
-    <state x="661" y="244" width="598" height="735" key="find.popup/-1235.23.1235.777/0.23.1920.1177@0.23.1920.1177" timestamp="1648873376302" />
-    <state width="1168" height="500" key="javadoc.popup.new" timestamp="1646122625145">
+    <state x="378" y="197" width="598" height="735" key="find.popup/-1235.23.1235.777/0.23.1920.1177@0.23.1920.1177" timestamp="1649234849646" />
+    <state width="1168" height="500" key="javadoc.popup.new" timestamp="1649232534605">
       <screen x="0" y="23" width="1920" height="1177" />
     </state>
     <state width="1168" height="500" key="javadoc.popup.new/-1228.23.1228.777/0.23.1920.1177@0.23.1920.1177" timestamp="1646122625145" />
     <state width="1168" height="500" key="javadoc.popup.new/-1230.23.1230.777/0.23.1920.1177@0.23.1920.1177" timestamp="1645675418290" />
+    <state width="1168" height="500" key="javadoc.popup.new/-1235.23.1235.777/0.23.1920.1177@0.23.1920.1177" timestamp="1649232534605" />
     <state x="353" y="234" key="new project wizard" timestamp="1644373572294">
       <screen x="0" y="23" width="1920" height="1177" />
     </state>
@@ -555,7 +563,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/LeetCode9.java</url>
-          <line>55</line>
+          <line>53</line>
           <option name="timeStamp" value="65" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -1225,6 +1233,16 @@
           <url>file://$PROJECT_DIR$/src/LeetCode95_不同的二叉搜索树II.java</url>
           <line>24</line>
           <option name="timeStamp" value="397" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/LeetCode54.java</url>
+          <line>50</line>
+          <option name="timeStamp" value="398" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/LeetCode54.java</url>
+          <line>66</line>
+          <option name="timeStamp" value="399" />
         </line-breakpoint>
         <breakpoint enabled="true" type="java-exception">
           <properties class="java.lang.NullPointerException" package="java.lang" />

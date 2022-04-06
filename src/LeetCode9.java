@@ -1,25 +1,25 @@
 /**
  * 回文数
- *
- *
+ * <p>
+ * <p>
  * 判断一个整数是否是回文数。回文数是指正序（从左向右）和倒序（从右向左）读都是一样的整数。
- *
+ * <p>
  * 示例 1:
- *
+ * <p>
  * 输入: 121
  * 输出: true
  * 示例 2:
- *
+ * <p>
  * 输入: -121
  * 输出: false
  * 解释: 从左向右读, 为 -121 。 从右向左读, 为 121- 。因此它不是一个回文数。
  * 示例 3:
- *
+ * <p>
  * 输入: 10
  * 输出: false
  * 解释: 从右向左读, 为 01 。因此它不是一个回文数。
  * 进阶:
- *
+ * <p>
  * 你能不将整数转为字符串来解决这个问题吗？
  */
 public class LeetCode9 {
@@ -39,43 +39,35 @@ public class LeetCode9 {
 
     /**
      * 计算最高位和最低位
+     *
      * @param x
      * @return
      */
     public static boolean isPalindrome(int x) {
-
         if (x < 0) {
             return false;
         }
 
-        if (x == 0 || x < 10) {
+        if (x < 10) {
             return true;
         }
-//        System.out.println("x = " + x);
-
         int dev = 1;
-        while (x / 10 / dev >= 1) {
+        while (x / dev >= 10) {
             dev *= 10;
         }
 
-//        System.out.println("dev = " + dev);
         while (x > 0) {
             if (x / dev != x % 10) {
                 return false;
             }
             x = x % dev / 10;
-
-//            System.out.println("x = " + x);
-
             dev /= 100;
         }
         return true;
     }
 
 
-
     /**
-     *
      * 字符串解法，速度较慢
      *
      * @param x
@@ -93,7 +85,7 @@ public class LeetCode9 {
 
         String str = Integer.toString(x);
 
-        for (int i = 0 ; i < str.length() / 2; i++) {
+        for (int i = 0; i < str.length() / 2; i++) {
             if (str.charAt(i) == str.charAt(str.length() - i - 1)) {
                 continue;
             } else {

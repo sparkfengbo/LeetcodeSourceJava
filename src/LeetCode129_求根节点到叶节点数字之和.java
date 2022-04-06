@@ -38,7 +38,7 @@ public class LeetCode129_求根节点到叶节点数字之和 {
             if (node.right != null) {
                 int sum = node.right.val + curr * 10;
                 dfs(node.right, sum);
-            } 
+            }
         }
     }
 
