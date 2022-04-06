@@ -22,37 +22,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b4385a63-8cf5-48a1-98bf-98fe8f564c3a" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/LeetCode62_不同路径.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LeetCode103.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LeetCode103.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LeetCode107_二叉树的层序遍历II.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LeetCode107_二叉树的层序遍历II.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LeetCode108_将有序数组转换为二叉搜索树.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LeetCode108_将有序数组转换为二叉搜索树.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LeetCode116.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LeetCode116_填充每个节点的下一个右侧节点指针.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LeetCode117.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LeetCode117_填充每个节点的下一个右侧节点指针II.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LeetCode126.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LeetCode126_单词接龙II.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LeetCode127.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LeetCode127_单词接龙.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LeetCode129_求根节点到叶节点数字之和.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LeetCode129_求根节点到叶节点数字之和.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LeetCode150.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LeetCode150.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LeetCode212.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LeetCode212_单词搜索II.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LeetCode22.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LeetCode22_括号生成.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LeetCode32_最长有效括号.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LeetCode32_最长有效括号.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LeetCode36.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LeetCode36_有效的数独.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LeetCode37.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LeetCode37_解数独.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LeetCode377_组合总和IV.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LeetCode377_组合总和IV.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LeetCode39_组合总和.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LeetCode39_组合总和.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LeetCode40_组合总和II.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LeetCode40_组合总和II.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LeetCode42.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LeetCode42_接雨水.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LeetCode51.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LeetCode51_N皇后.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LeetCode52.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LeetCode52_N皇后II.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LeetCode62.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LeetCode63.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LeetCode63_不同路径II.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LeetCode79.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LeetCode79_单词搜索.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LeetCode93.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LeetCode93_复原IP地址.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LeetCode95_不同的二叉搜索树II.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LeetCode95_不同的二叉搜索树II.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LeetCode96_不同的二叉搜索树.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LeetCode96_不同的二叉搜索树.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LeetCode980.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LeetCode980_不同路径III.java" afterDir="false" />
-    </list>
+    <list default="true" id="b4385a63-8cf5-48a1-98bf-98fe8f564c3a" name="Default" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -280,7 +250,7 @@
       <workItem from="1647394019301" duration="6084000" />
       <workItem from="1647401095302" duration="11583000" />
       <workItem from="1647415946933" duration="4475000" />
-      <workItem from="1647424822952" duration="144074000" />
+      <workItem from="1647424822952" duration="144173000" />
     </task>
     <servers />
   </component>
