@@ -74,6 +74,7 @@ public class LeetCode10_正则表达式匹配 {
 
             boolean[][] f = new boolean[m + 1][n + 1];
             f[0][0] = true;
+
             for (int i = 0; i <= m; ++i) {
                 for (int j = 1; j <= n; ++j) {
                     if (p.charAt(j - 1) == '*') {

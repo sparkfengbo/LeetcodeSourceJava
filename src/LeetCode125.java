@@ -11,7 +11,6 @@ public class LeetCode125 {
         if (len == 0 || len == 1) {
             return true;
         }
-//        s = s.toLowerCase();
         int left = 0;
         int right = len - 1;
         while (left < right) {
