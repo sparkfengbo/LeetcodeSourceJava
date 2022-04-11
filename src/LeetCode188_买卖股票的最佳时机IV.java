@@ -43,7 +43,7 @@ public class LeetCode188_买卖股票的最佳时机IV {
         }
         int[][][] dp = new int[n][k+1][2];
 
-        dp[0][1][1] = -prices[0];
+//        dp[0][1][1] = -prices[0];
 
         for (int j = 1; j < k+1; j++) {
             dp[0][j][1] = -prices[0];

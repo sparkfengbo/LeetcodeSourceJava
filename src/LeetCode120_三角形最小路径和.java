@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class LeetCode120 {
+public class LeetCode120_三角形最小路径和 {
 
     public static void main(String[] args) {
         List<List<Integer>> triangle = new ArrayList<>();

@@ -1,6 +1,6 @@
 import utils.Utils;
 
-public class LeetCode132 {
+public class LeetCode132_分割回文串II {
 
     /**
      * dp[i] = s[0:i]的最短

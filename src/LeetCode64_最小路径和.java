@@ -1,4 +1,4 @@
-public class LeetCode64 {
+public class LeetCode64_最小路径和 {
 
 
     class Solution {

@@ -1,4 +1,4 @@
-public class LeetCode72 {
+public class LeetCode72_编辑距离 {
     //    链接：https://leetcode-cn.com/problems/edit-distance/solution/bian-ji-ju-chi-by-leetcode-solution/
     public static int minDistance(String word1, String word2) {
         int n = word1.length();

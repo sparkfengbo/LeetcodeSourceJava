@@ -1,4 +1,4 @@
-public class LeetCode115 {
+public class LeetCode115_不同的子序列 {
 
     /**
      * n >= m   else false

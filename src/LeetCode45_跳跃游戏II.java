@@ -44,4 +44,30 @@ public class LeetCode45_跳跃游戏II {
         return steps;
     }
 
+    public int jump3(int[] nums) {
+        int step = 0;
+        int left = 0;
+        int right = 0;
+
+        if (nums.length == 1) {
+           return 0;
+        }
+
+        while (left <= right) {
+            step++;
+            int oldRight = right;
+            for (int i = left; i < oldRight; i++) {
+                int newRight = i + nums[i];
+                if (newRight >= nums.length - 1) {
+                    return step;
+                }
+                if (newRight > right) {
+                    right = newRight;
+                }
+            }
+            left = oldRight + 1;
+        }
+        return step;
+    }
+
 }
