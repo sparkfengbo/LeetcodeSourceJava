@@ -31,6 +31,7 @@ public class LeetCode23 {
 
     /**
      * 方法1 ： 两两合并
+     *
      * @param lists
      * @return
      */
@@ -70,13 +71,13 @@ public class LeetCode23 {
     }
 
     public static ListNode merge(ListNode[] lists, int l, int r) {
-        if(l > r) {
+        if (l > r) {
             return null;
         }
-        if(l == r) {
+        if (l == r) {
             return lists[l];
         }
-        int mid = (l + r) >>1;
+        int mid = (l + r) >> 1;
 //        int mid = l + (right - l) /2;
         return mergeTwoLists(merge(lists, l, mid), merge(lists, mid + 1, r));
     }
@@ -110,7 +111,7 @@ public class LeetCode23 {
 
         ListNode dummyNode = new ListNode(0);
         ListNode p = dummyNode;
-        while(!queue.isEmpty()) {
+        while (!queue.isEmpty()) {
             p.next = queue.poll();
             p = p.next;
 

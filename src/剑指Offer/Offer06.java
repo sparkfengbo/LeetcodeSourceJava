@@ -9,6 +9,12 @@ import java.util.LinkedList;
 
 public class Offer06 {
 
+//    class Solution {
+//        public int[] reversePrint(ListNode head) {
+//
+//        }
+//    }
+
     public int[] reversePrint(ListNode head) {
         if (head == null) {
             return new int[]{};
