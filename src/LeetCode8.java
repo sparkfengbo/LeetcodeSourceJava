@@ -70,7 +70,7 @@ public class LeetCode8 {
                     symbol = true;
                 }
                 break;
-            } else if (str.charAt(i) >= '0' || str.charAt(i) <= '9') {
+            } else if (str.charAt(i) >= '0' && str.charAt(i) <= '9') {
                 startIndex = i ;
                 break;
             } else {
